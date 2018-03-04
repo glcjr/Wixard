@@ -8,6 +8,10 @@ It can create MSI, Wix files, or a Bootstrapper exe with the help of WixSharp.
 
 For the editor it uses AvalonEdit https://github.com/icsharpcode/AvalonEdit
 
+For the compiler it uses my Easy Compiler. It needs to be downloaded from my repository in order to compile
+
+It also uses my download nuget project. It also needs to be downloaded from its resository as well. Both source files are linked into Wixard.
+
 If you find the application helpful, a donation would be appreciated.
 Donate with this link: paypal.me/GColeJr
 Please choose Friends and Family
