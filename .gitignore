@@ -3,3 +3,16 @@
 ################################################################################
 
 /.vs/WIXSharpProjectFile/v15
+/WixSharpHelperTester/bin/Debug
+/WixSharpHelperTester/obj/Debug
+/WixSharpScriptBuilder/bin/Debug/netstandard2.0
+/WixSharpScriptBuilder/obj
+/WIXSharpProjectFile/obj
+/WIXSharpProjectFile/bin/Debug/netstandard2.0
+/Wixard/bin/Debug
+/Wixard/obj/Debug
+/PathManipulator/obj
+/PathManipulator
+/Wixard/bin/Release/app.publish
+/Wixard/publish
+/WixSharpHelperTester/obj/Release
