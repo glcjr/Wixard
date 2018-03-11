@@ -864,5 +864,15 @@ namespace Wixard
         {
             GridCheck(AboutGrid);
         }
+
+        private void btnGithub_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/glcjr/Wixard");
+        }
+
+        private void btnDonate_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://paypal.me/GColeJr");
+        }
     }
 }

@@ -1319,7 +1319,13 @@
                     <Label FontSize="12" HorizontalAlignment="Center" Content="This program is licensed under the GPLv3."/>
                 </Viewbox>
                 <Viewbox Grid.Row="4" Grid.ColumnSpan="7">
-                    <Label FontSize="12" HorizontalAlignment="Center" Content="More Info can be found at Github: https://github.com/glcjr/Wixard" />
+                    <Label FontSize="12" HorizontalAlignment="Center" Content="More Info can be found at Github" />
+                </Viewbox>
+                <Viewbox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                    <Button x:Name="btnGithub" Content="Github" Click="btnGithub_Click" />
+                </Viewbox>
+                <Viewbox Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2">
+                    <Button x:Name="btnDonate" Content="Donate" Click="btnDonate_Click" />
                 </Viewbox>
                 <Viewbox Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="8">
                     <Label Content="©2018 Gary Cole."  FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" />
