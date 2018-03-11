@@ -69,6 +69,8 @@ namespace Wixard
             cbRegHive.ItemsSource = Enum.GetValues(typeof(WIXSharpHelper.RegistryHive));
             win.Addnetids();
             win.CheckEnvironment();
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            lblVersion.Content = AssemblyName.GetAssemblyName(assembly.Location).Version.ToString();
             GridCheck(AppInfo);
         }
         
@@ -104,6 +106,7 @@ namespace Wixard
             Close(SFilesGrid);
             Close(EditorGrid);
             Close(CompileOptionsGrid);
+            Close(AboutGrid);
             btncompile.Visibility = Visibility.Hidden;
         }
         private void GridCheck(Grid panel)
@@ -855,6 +858,11 @@ namespace Wixard
                 btnFileSaveAs_Click(sender, e);
             else
                 win.Save(win.Filename);
+        }
+
+        private void btnabout_Click(object sender, RoutedEventArgs e)
+        {
+            GridCheck(AboutGrid);
         }
     }
 }

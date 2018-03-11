@@ -44,6 +44,11 @@
                         <Image Source="Resource\compiler.png"/>
                     </StackPanel>
                 </Button>
+                <Button x:Name="btnabout" Grid.Row="0" MaxWidth="100" Click="btnabout_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\info.png"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -1267,7 +1272,7 @@
                     </Viewbox>
                 </Grid>
             </Grid>
-            <Grid Name="EditorGrid" Grid.Column="1" Visibility="Visible">
+            <Grid Name="EditorGrid" Grid.Column="1" Visibility="Hidden">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10*" />
                     <RowDefinition Height="80*" />
@@ -1283,6 +1288,43 @@
                     Grid.Row="1"/>
                 
                 <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Grid.Row="2" Text="{Binding Compileresult}" />
+            </Grid>
+            <Grid Name="AboutGrid" Grid.Column="1" Visibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="50*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="2">
+                <Label Content="Wixard"  FontSize="26" HorizontalAlignment="Center" Margin="0,0,-1,21" /></Viewbox>
+                <Viewbox Grid.Row="2" Grid.ColumnSpan="7">
+                    <Label x:Name="lblVersion" Content="" FontSize="12"  HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                </Viewbox>
+                <Viewbox Grid.Row="3" Grid.ColumnSpan="7">
+                    <Label FontSize="12" HorizontalAlignment="Center" Content="This program is licensed under the GPLv3."/>
+                </Viewbox>
+                <Viewbox Grid.Row="4" Grid.ColumnSpan="7">
+                    <Label FontSize="12" HorizontalAlignment="Center" Content="More Info can be found at Github: https://github.com/glcjr/Wixard" />
+                </Viewbox>
+                <Viewbox Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="8">
+                    <Label Content="©2018 Gary Cole."  FontSize="8" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Viewbox>               
+                
             </Grid>
         </Grid>
     </Grid>

@@ -160,6 +160,7 @@
     <Resource Include="Resource\compiler.png" />
     <Resource Include="Resource\editor.png" />
     <Resource Include="Resource\options.png" />
+    <Resource Include="Resource\info.png" />
     <Content Include="wixids\wixdetectnet.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
