@@ -154,6 +154,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resource\save.png" />
+    <Resource Include="Resource\saveas.png" />
+    <Resource Include="Resource\folder.png" />
+    <Resource Include="Resource\compiler.png" />
+    <Resource Include="Resource\editor.png" />
+    <Resource Include="Resource\options.png" />
     <Content Include="wixids\wixdetectnet.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

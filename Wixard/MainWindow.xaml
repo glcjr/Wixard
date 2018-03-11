@@ -9,14 +9,41 @@
         Title="Wixard" Height="600" Width="843" FontSize="14" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*" />
-            <RowDefinition Height="95*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="90*" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnFileOpen" Content="Open" MaxWidth="60" Click="btnFileOpen_Click" />
-                <Button x:Name="btnFileSave" Content="Save" MaxWidth="60" Click="btnFileSave_Click" />
-                <Button x:Name="btnFileSaveAs" Content="Save As" MaxWidth="60" Click="btnFileSaveAs_Click" />
+                <Button x:Name="btnFileOpen" MaxWidth="100" Click="btnFileOpen_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\folder.png" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnFileSave" MaxWidth="100" Click="btnFileSave_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\save.png" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnFileSaveAs" MaxWidth="100" Click="btnFileSaveAs_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\saveas.png"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnEditor" MaxWidth="100" Click="btnEditor_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\editor.png"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnOptions" MaxWidth="100" Click="btnOptions_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\options.png"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btncompile" Grid.Row="0" MaxWidth="100" Click="btncompile_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resource\compiler.png"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -69,12 +96,8 @@
                     <Viewbox>
                         <Button x:Name="btnEles" Content="Wix Elements" MinWidth="{Binding ElementName=btnFW, Path=ActualWidth}" Click="btnEles_Click" />
                     </Viewbox>
-                    <Viewbox>
-                        <Button x:Name="btnOptions" Content="Options" MinWidth="{Binding ElementName=btnFW, Path=ActualWidth}" Click="btnOptions_Click" />
-                    </Viewbox>
-                    <Viewbox>
-                        <Button x:Name="btnEditor" Content="Editor" MinWidth="{Binding ElementName=btnFW, Path=ActualWidth}" Click="btnEditor_Click" />
-                    </Viewbox>
+                    
+                    
                 </StackPanel>
 
 
@@ -1258,7 +1281,7 @@
     FontFamily="Consolas"
     FontSize="10pt"                    
                     Grid.Row="1"/>
-                <Button x:Name="btncompile" Content="Compile" Grid.Row="0" MaxWidth="100" Click="btncompile_Click" />
+                
                 <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Grid.Row="2" Text="{Binding Compileresult}" />
             </Grid>
         </Grid>

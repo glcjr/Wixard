@@ -104,6 +104,7 @@ namespace Wixard
             Close(SFilesGrid);
             Close(EditorGrid);
             Close(CompileOptionsGrid);
+            btncompile.Visibility = Visibility.Hidden;
         }
         private void GridCheck(Grid panel)
         {
@@ -726,6 +727,7 @@ namespace Wixard
             textEditor.TextArea.IndentationStrategy = new ICSharpCode.AvalonEdit.Indentation.CSharp.CSharpIndentationStrategy(textEditor.Options); // wish this would update a loaded script to make it look nicer like Visual Studio does...
             textEditor.Load(win.GetCsScriptStream()); // Yes I know about setting it to a string rather than using Load but that results in an error if someone leaves the editor to change something in the GUI and comes back to the script when it updates.
             GridCheck(EditorGrid);
+            btncompile.Visibility = Visibility.Visible;
         }
 
         private void btnsetlocalwixsharp_Click(object sender, RoutedEventArgs e)

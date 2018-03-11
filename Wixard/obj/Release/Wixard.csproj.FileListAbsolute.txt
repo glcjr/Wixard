@@ -126,3 +126,4 @@ C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.application
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.exe
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.pdb
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csproj.CopyComplete
