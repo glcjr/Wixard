@@ -1730,6 +1730,14 @@ namespace Wixard
             {
                 if (!Directory.Exists(Workingdir))
                     Directory.CreateDirectory(Workingdir);
+                
+            }
+            catch
+            { }
+            try
+            {
+                foreach (var f in wixsharplist)
+                    File.Copy(f, $@"{Workingdir}\{f.Remove(0, f.LastIndexOf("\\") + 1)}");
             }
             catch
             { }
@@ -1815,12 +1823,7 @@ namespace Wixard
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
             path += @"\Reference Assemblies\Microsoft\Framework\.NETFramework\";
-            string ver = "v"+string.Format("{0}.{1}.{2}", Environment.Version.Major, Environment.Version.MajorRevision, Environment.Version.Build);           
-            string checkpath = path + ver + @"\System.Windows.Forms.dll";
-            if (File.Exists(checkpath))
-                return checkpath;
-            else
-            {
+            
                 string[] directories = Directory.GetDirectories(path);
                 foreach (var d in directories)
                 {
@@ -1829,11 +1832,16 @@ namespace Wixard
                         string test = d + @"\System.Windows.Forms.dll";
                         if (File.Exists(test))
                         {
+                            try
+                            {
+                                File.Copy(test, $@"{Workingdir}\System.Windows.Forms.dll");
+                            }
+                            catch
+                            { }
                             return test;
                         }
                     }
-                }
-            }
+                }            
             return "";
         }
         //private bool triedassemblydirectly = false;
@@ -1877,6 +1885,18 @@ namespace Wixard
             }
             catch
             { }
+            try
+            {
+                try
+                {
+                    foreach (var f in wixsharplist)
+                        File.Delete($@"{Workingdir}\{f.Remove(0, f.LastIndexOf("\\") + 1)}");
+                }
+                catch
+                { }
+            }
+            catch
+            { }
         }
 
         #endregion
@@ -1907,6 +1927,10 @@ namespace Wixard
             }
             Filename = file;
             Saved = true;
+        }
+        private void sayhello()
+        {
+            MessageBox.Show("Say Hello");
         }
         #endregion
     }
