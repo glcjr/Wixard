@@ -740,6 +740,7 @@ namespace Wixard
             if (browserdialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 lblwixsharplocation.Content = browserdialog.SelectedPath;
+                win.ClearWixSharp();
             }
         }
 
@@ -750,6 +751,7 @@ namespace Wixard
             if (browserdialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 lblwixlocation.Content = browserdialog.SelectedPath;
+                win.ClearWix();
             }
         }
 
@@ -795,16 +797,17 @@ namespace Wixard
         {
             List<string> wixsharp = win.wixsharplist;
             bool found = false;
-            string location = args.Name.Substring(0, args.Name.IndexOf(","));
-            if (File.Exists($@"{win.Workingdir}/{location}.exe"))
+            string location = "";
+            string targetfilename = args.Name.Substring(0, args.Name.IndexOf(","));
+            if (File.Exists($@"{win.Workingdir}/{targetfilename}.exe"))
             {
                 found = true;
-                location = $@"{win.Workingdir}/{location}.exe";
+                location = $@"{win.Workingdir}/{targetfilename}.exe";
             }
-            else if (File.Exists($@"{win.Workingdir}/{location}.dll"))
+            else if (File.Exists($@"{win.Workingdir}/{targetfilename}.dll"))
             {
                 found = true;
-                location = $@"{win.Workingdir}/{location}.dll";
+                location = $@"{win.Workingdir}/{targetfilename}.dll";
             }
             if (!found)
             {
@@ -813,7 +816,7 @@ namespace Wixard
                 string[] directories = Directory.GetDirectories(path);
                 foreach (var d in directories)
                 {
-                    string test = d + $@"\{location}.dll";
+                    string test = d + $@"\{targetfilename}.dll";
                     if (File.Exists(test))
                     {
                         found = true;
@@ -824,9 +827,9 @@ namespace Wixard
             if (!found)
             {
                 foreach (var f in wixsharp)
-                    if (f.EndsWith("WixSharp.dll"))
+                    if (f.EndsWith($"{targetfilename}.dll"))
                     {
-                        location = f.Replace("WixSharp.dll", "") + location + ".dll";
+                        location = f;//.Replace("WixSharp.dll", "") + location + ".dll";
                         found = true;
                         break;
                     }
@@ -890,5 +893,36 @@ namespace Wixard
         {
             System.Diagnostics.Process.Start("http://paypal.me/GColeJr");
         }
+
+        private void textEditor_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var position = textEditor.GetPositionFromPoint(e.GetPosition(textEditor));
+            if (position.HasValue)
+            {
+                textEditor.TextArea.Caret.Position = position.Value;
+            }
+        }
+
+        private void btnEditorCopy_Click(object sender, RoutedEventArgs e)
+        {
+            textEditor.Copy();           
+        }
+
+        private void btnEditorPaste_Click(object sender, RoutedEventArgs e)
+        {
+            textEditor.Paste();
+        }
+
+        private void btnEditorCut_Click(object sender, RoutedEventArgs e)
+        {
+            textEditor.Cut();
+        }
+
+        private void btnEditorSelectAll_Click(object sender, RoutedEventArgs e)
+        {
+            textEditor.SelectAll();
+        }
+
+      
     }
 }

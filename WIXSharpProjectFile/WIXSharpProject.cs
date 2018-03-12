@@ -319,6 +319,11 @@ namespace WIXSharpHelper
         public void SetOptionalDesktopShortcut(bool includeoptionaldesktopshortcut)
         {
             Options.SetOptionalDesktopShortcut(includeoptionaldesktopshortcut);
+            checkcustomactions();
+        }
+        public void checkcustomactions()
+        {
+            Options.SetCustomActions(Options.GetOptionalDesktopShortcut() || Options.GetPromptReboot()); 
         }
         public void AddUser(string name, string password, string domain = "Environment.MachineName", bool pwneverexpire = true)
         {
@@ -342,7 +347,8 @@ namespace WIXSharpHelper
         }
         public void SetPromptReboot(bool value)
         {
-            Options.SetPromptReboot(value);            
+            Options.SetPromptReboot(value);
+            checkcustomactions();
                
         }
         public bool GetPromptReboot()

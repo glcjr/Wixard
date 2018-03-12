@@ -64,14 +64,15 @@ namespace WixSharpScriptBuilder
         }
         private string GetBootstrapperInfo()
         {
-            string temp = Utilities.AddIfNotEmpty("\tbootstrapper.Condition = \"//INSERTTEXTHERE//\";", Options.GetMinimumNetVersion());
+            string temp = Utilities.AddIfNotEmpty("\tbootstrapper.Condition = \"NOT //INSERTTEXTHERE//\";", Options.GetMinimumNetVersion());
+            //temp += $"\tbootstrapper.Version =Tasks.GetVersionFromFile(msiproject);\n";
             temp += Utilities.AddIfNotEmpty("\tbootstrapper.Version = new System.Version(\"//INSERTTEXTHERE//\");", application.GetVersion());
             temp += Utilities.AddIfNotEmpty("\tbootstrapper.UpgradeCode = new System.Guid(\"//INSERTTEXTHERE//\");", application.GetBootstapperGuid());
             temp += Utilities.AddIfNotEmpty("\tbootstrapper.Manufacturer = \"//INSERTTEXTHERE//\";", application.GetPublisher());
             temp += Utilities.AddIfNotEmpty("\tbootstrapper.HelpUrl = \"//INSERTTEXTHERE//\";", application.GetLink());
             temp += Utilities.AddIfNotEmpty("\tbootstrapper.IconFile = @\"//INSERTTEXTHERE//\";", application.GetIcon());
             //  temp += Utilities.AddIfNotEmpty("\tbootstrapper.OutFileName = \"//INSERTTEXTHERE//netfx\";", application.GetProductName().Replace(" ", ""));
-            temp += "\tbootstrapper.OutFileName = OutputFile +\"netfx\";";
+            temp += $"\tbootstrapper.OutFileName = OutputFile +\"netfx\";{Environment.NewLine}";
             return temp;
         }
         public string GetBootStrapper(string msiproject)

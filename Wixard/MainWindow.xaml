@@ -1285,8 +1285,40 @@
     SyntaxHighlighting="C#"
     FontFamily="Consolas"
     FontSize="10pt"                    
-                    Grid.Row="1"/>
-                
+                    Grid.Row="1" MouseRightButtonDown="textEditor_MouseRightButtonDown">
+                    <avalonEdit:TextEditor.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Command="Undo" />
+                            <MenuItem Command="Redo" />
+                            <Separator/>
+                            <MenuItem Command="Cut" />
+                            <MenuItem Command="Copy" />
+                            <MenuItem Command="Paste" />
+                        </ContextMenu>
+                    </avalonEdit:TextEditor.ContextMenu>
+                </avalonEdit:TextEditor>
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <Button x:Name="btnEditorCopy" MaxWidth="100" Click="btnEditorCopy_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Resource\copy.png"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnEditorPaste" MaxWidth="100" Click="btnEditorPaste_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Resource\paste.png"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnEditorCut" MaxWidth="100" Click="btnEditorCut_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Resource\cut.png"/>
+                        </StackPanel>
+                    </Button>                    
+                    <Button x:Name="btnEditorSelectAll" MaxWidth="100" Click="btnEditorSelectAll_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Resource\select.png"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
                 <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Grid.Row="2" Text="{Binding Compileresult}" />
             </Grid>
             <Grid Name="AboutGrid" Grid.Column="1" Visibility="Visible">

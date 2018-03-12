@@ -853,6 +853,9 @@ namespace Wixard
             NotifyCustomElement();
             currentcustomindex = -1;
         }
+
+        
+
         private void NotifyCustomElement()
         {
             NotifyPropertyChanged("NewElementValue");
@@ -865,6 +868,8 @@ namespace Wixard
             NotifyCustomElement();
             currentcustomindex = index;
         }
+
+        
         public void UpdateCustomElement()
         {
             if (currentcustomindex != -1)
@@ -1624,6 +1629,16 @@ namespace Wixard
             stream.Position = 0;
             return stream;
         }
+        internal void ClearWix()
+        {
+            filledwix = false;
+            wixlist = new List<string>();
+        }
+        internal void ClearWixSharp()
+        {
+            filledwixsharp = false;
+            wixsharplist = new List<string>();
+        }
         private bool filledwix = false;
         public List<string> wixlist = new List<string>();
         public async void DownloadWix()
@@ -1735,8 +1750,9 @@ namespace Wixard
                 compile.AddAssemblyLocations(wixsharplist.ToArray());
                 if (CsScript.Contains("using System.Windows.Forms"))
                 {
-                    compile.AddAssemblyLocation(GetSystemWindowsForms());
-                    compile.AddEmbedLocation(GetSystemWindowsForms());
+                    string windowsform = GetSystemWindowsForms();
+                    compile.AddAssemblyLocation(windowsform);
+                    compile.AddEmbedLocation(windowsform);
                 }
                 compiledfilename = $"{Workingdir}\\w{rand.Next(0, 5000)}{ApplicationName.Replace(" ", "_")}.exe";
                 compile.SetResultFileName(compiledfilename);
@@ -1808,7 +1824,7 @@ namespace Wixard
                 string[] directories = Directory.GetDirectories(path);
                 foreach (var d in directories)
                 {
-                    if (d.CompareTo(path + "v4.6.1") >= 0)
+                    if (d.CompareTo(path + "v3.5") >= 0)
                     {
                         string test = d + @"\System.Windows.Forms.dll";
                         if (File.Exists(test))

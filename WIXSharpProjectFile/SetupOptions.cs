@@ -92,6 +92,7 @@ namespace WIXSharpHelper
             if (desktopshortcut)
                 customactions = true;
         }
+        
         public void SetBuild64(bool value)
         {
             build64 = value;
@@ -143,6 +144,11 @@ namespace WIXSharpHelper
         public bool GetCustomActions()
         {
             return customactions;
+        }
+
+        internal void SetCustomActions(bool v)
+        {
+            customactions = v;
         }
     }
 }

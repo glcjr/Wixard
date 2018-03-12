@@ -151,6 +151,10 @@
     <Resource Include="Resource\editor.png" />
     <Resource Include="Resource\options.png" />
     <Resource Include="Resource\info.png" />
+    <Resource Include="Resource\cut.png" />
+    <Resource Include="Resource\copy.png" />
+    <Resource Include="Resource\paste.png" />
+    <Resource Include="Resource\select.png" />
     <Content Include="wixids\wixdetectnet.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
