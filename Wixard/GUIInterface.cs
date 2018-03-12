@@ -1799,15 +1799,22 @@ namespace Wixard
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
             path += @"\Reference Assemblies\Microsoft\Framework\.NETFramework\";
-            string[] directories = Directory.GetDirectories(path);
-            foreach (var d in directories)
+            string ver = "v"+string.Format("{0}.{1}.{2}", Environment.Version.Major, Environment.Version.MajorRevision, Environment.Version.Build);           
+            string checkpath = path + ver + @"\System.Windows.Forms.dll";
+            if (File.Exists(checkpath))
+                return checkpath;
+            else
             {
-                if (d.CompareTo(path+"v4.6.1") >= 0)
+                string[] directories = Directory.GetDirectories(path);
+                foreach (var d in directories)
                 {
-                    string test = d + @"\System.Windows.Forms.dll";
-                    if (File.Exists(test))
+                    if (d.CompareTo(path + "v4.6.1") >= 0)
                     {
-                        return test;
+                        string test = d + @"\System.Windows.Forms.dll";
+                        if (File.Exists(test))
+                        {
+                            return test;
+                        }
                     }
                 }
             }
