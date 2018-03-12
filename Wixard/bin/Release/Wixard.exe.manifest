@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="Wixard.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Wixard" version="1.0.6644.26517" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Wixard" version="1.0.6644.39502" language="neutral" processorArchitecture="msil" />
     <commandLine file="Wixard.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -575,14 +575,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wixard.exe" size="652736">
-      <assemblyIdentity name="Wixard" version="1.0.6644.26517" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wixard.exe" size="653248">
+      <assemblyIdentity name="Wixard" version="1.0.6644.39502" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZZenbfTBDusC8H1YJ7KilKyqYLLGQRP6Y+saDVP5z2Q=</dsig:DigestValue>
+        <dsig:DigestValue>AsYG4LgxMOzsUAYos3H8zX7F9T95r+7dHbrBK+kmMLo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

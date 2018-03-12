@@ -14,37 +14,37 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnFileOpen" MaxWidth="100" Click="btnFileOpen_Click" >
+                <Button x:Name="btnFileOpen" MaxWidth="100" Click="btnFileOpen_Click" ToolTip="Load a Wixard Project" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\folder.png" />
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnFileSave" MaxWidth="100" Click="btnFileSave_Click" >
+                <Button x:Name="btnFileSave" MaxWidth="100" Click="btnFileSave_Click" ToolTip="Save the Wixard Project">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\save.png" />
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnFileSaveAs" MaxWidth="100" Click="btnFileSaveAs_Click">
+                <Button x:Name="btnFileSaveAs" MaxWidth="100" Click="btnFileSaveAs_Click" ToolTip="Save the Wixard Project with a new Name">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\saveas.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnEditor" MaxWidth="100" Click="btnEditor_Click" >
+                <Button x:Name="btnEditor" MaxWidth="100" Click="btnEditor_Click" ToolTip="Open the C# Editor">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\editor.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnOptions" MaxWidth="100" Click="btnOptions_Click" >
+                <Button x:Name="btnOptions" MaxWidth="100" Click="btnOptions_Click" ToolTip="Set Options for Wixard" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\options.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btncompile" Grid.Row="0" MaxWidth="100" Click="btncompile_Click" >
+                <Button x:Name="btncompile" Grid.Row="0" MaxWidth="100" Click="btncompile_Click" ToolTip="Compile the Script" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\compiler.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnabout" Grid.Row="0" MaxWidth="100" Click="btnabout_Click">
+                <Button x:Name="btnabout" Grid.Row="0" MaxWidth="100" Click="btnabout_Click" ToolTip="About Wixard">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="Resource\info.png"/>
                     </StackPanel>

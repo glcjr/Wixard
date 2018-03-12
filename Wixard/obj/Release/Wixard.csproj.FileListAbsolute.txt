@@ -120,10 +120,10 @@ C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\MainWindow.baml
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.g.resources
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.Properties.Resources.resources
-C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csproj.GenerateResource.Cache
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csproj.GenerateResource.cache
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csproj.CoreCompileInputs.cache
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.exe.manifest
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.application
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csproj.CopyComplete
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.exe
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.pdb
-C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csproj.CopyComplete
