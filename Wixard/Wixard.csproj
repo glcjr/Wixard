@@ -144,16 +144,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WIXSharpProjectFile\WIXSharpHelper.csproj">
-      <Project>{7f66f7c9-5d01-4a82-bb93-b06ee539d95f}</Project>
-      <Name>WIXSharpHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WixSharpScriptBuilder\WixSharpScriptBuilder.csproj">
-      <Project>{7dcca3f0-0987-4d48-96ba-21f8f99014d7}</Project>
-      <Name>WixSharpScriptBuilder</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\save.png" />
     <Resource Include="Resource\saveas.png" />
     <Resource Include="Resource\folder.png" />
@@ -179,6 +169,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WIXSharpProjectFile\WIXSharpHelper.csproj">
+      <Project>{7f66f7c9-5d01-4a82-bb93-b06ee539d95f}</Project>
+      <Name>WIXSharpHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WixSharpScriptBuilder\WixSharpScriptBuilder.csproj">
+      <Project>{7dcca3f0-0987-4d48-96ba-21f8f99014d7}</Project>
+      <Name>WixSharpScriptBuilder</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

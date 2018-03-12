@@ -20,6 +20,7 @@ using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO.Compression;
+using System.Windows.Forms;
 /*********************************************************************************************************************************
 Copyright and Licensing Message
 
@@ -1732,6 +1733,11 @@ namespace Wixard
                 Compiler compile = new Compiler(CompilerLanguages.csharp, CsScript);
                 compile.AddUsefulWindowsDesktopAssemblies();
                 compile.AddAssemblyLocations(wixsharplist.ToArray());
+                if (CsScript.Contains("using System.Windows.Forms"))
+                {
+                    compile.AddAssemblyLocation(GetSystemWindowsForms());
+                    compile.AddEmbedLocation(GetSystemWindowsForms());
+                }
                 compiledfilename = $"{Workingdir}\\w{rand.Next(0, 5000)}{ApplicationName.Replace(" ", "_")}.exe";
                 compile.SetResultFileName(compiledfilename);
                 compile.SetToOutputEXE();
@@ -1788,6 +1794,24 @@ namespace Wixard
             else
                 Compileresult += "Still Downloading Wix. Try again in a second\n";
             NotifyPropertyChanged("Compileresult");            
+        }
+        private string GetSystemWindowsForms()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            path += @"\Reference Assemblies\Microsoft\Framework\.NETFramework\";
+            string[] directories = Directory.GetDirectories(path);
+            foreach (var d in directories)
+            {
+                if (d.CompareTo(path+"v4.6.1") >= 0)
+                {
+                    string test = d + @"\System.Windows.Forms.dll";
+                    if (File.Exists(test))
+                    {
+                        return test;
+                    }
+                }
+            }
+            return "";
         }
         //private bool triedassemblydirectly = false;
         //private void runscript(Assembly Compiled)
@@ -1846,7 +1870,7 @@ namespace Wixard
                 project = (WIXSharpProject) formatter.Deserialize(deflateStream);
             }
             Filename = file;
-            Saved = true;
+            Saved = true;           
             NotifyALL();
         }
         public void Save(string file)

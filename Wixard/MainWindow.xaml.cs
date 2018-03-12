@@ -806,7 +806,21 @@ namespace Wixard
                 found = true;
                 location = $@"{win.Workingdir}/{location}.dll";
             }
-           
+            if (!found)
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+                path += @"\Reference Assemblies\Microsoft\Framework\.NETFramework\";
+                string[] directories = Directory.GetDirectories(path);
+                foreach (var d in directories)
+                {
+                    string test = d + $@"\{location}.dll";
+                    if (File.Exists(test))
+                    {
+                        found = true;
+                        location = test;
+                    }
+                }
+            }
             if (!found)
             {
                 foreach (var f in wixsharp)
@@ -834,6 +848,8 @@ namespace Wixard
             of.InitialDirectory = SetInitDirectory();
             if (of.ShowDialog() == true)
                 win.Load(of.FileName);
+            if (win.MinimumNet != string.Empty)
+                cbnetframework.IsChecked = true;
         }
         private string SetInitDirectory()
         {
