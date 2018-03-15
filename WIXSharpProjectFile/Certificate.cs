@@ -50,8 +50,7 @@ namespace WIXSharpHelper
         private bool AuthorityRequest = false;
         public Certificate()
         {
-
-        }
+                    }
         public Certificate(string name, string certificatepath, string storelocation="localMachine", string storename= "personal", bool authorityrequest = false )
         {
             Name = name;

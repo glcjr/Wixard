@@ -96,10 +96,106 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="..\..\DownloadNuget\DownloadNuget\DLNuget.cs">
-      <Link>DLNuget.cs</Link>
+      <Link>Links\DLNuget.cs</Link>
     </Compile>
     <Compile Include="..\..\EasyCompile\EasyCompile\Compiler.cs">
-      <Link>Compiler.cs</Link>
+      <Link>Links\Compiler.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\AdvancedOptions.cs">
+      <Link>Links\Helper\AdvancedOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\ApplicationInfo.cs">
+      <Link>Links\Helper\ApplicationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Certificate.cs">
+      <Link>Links\Helper\Certificate.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Certificates.cs">
+      <Link>Links\Helper\Certificates.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Element.cs">
+      <Link>Links\Helper\Element.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Elements.cs">
+      <Link>Links\Helper\Elements.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\EnvironmentVar.cs">
+      <Link>Links\Helper\EnvironmentVar.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\EnvironmentVars.cs">
+      <Link>Links\Helper\EnvironmentVars.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Feature.cs">
+      <Link>Links\Helper\Feature.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Features.cs">
+      <Link>Links\Helper\Features.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\FileAssociation.cs">
+      <Link>Links\Helper\FileAssociation.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\FileAssociations.cs">
+      <Link>Links\Helper\FileAssociations.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\FirewallException.cs">
+      <Link>Links\Helper\FirewallException.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\FirewallExceptions.cs">
+      <Link>Links\Helper\FirewallExceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\RegistryValue.cs">
+      <Link>Links\Helper\RegistryValue.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\RegistryValues.cs">
+      <Link>Links\Helper\RegistryValues.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\SetupOptions.cs">
+      <Link>Links\Helper\SetupOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\SigningInfo.cs">
+      <Link>Links\Helper\SigningInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\SourceFile.cs">
+      <Link>Links\Helper\SourceFile.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\SourceFiles.cs">
+      <Link>Links\Helper\SourceFiles.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\User.cs">
+      <Link>Links\Helper\User.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\Users.cs">
+      <Link>Links\Helper\Users.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\WAttribute.cs">
+      <Link>Links\Helper\WAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\WAttributes.cs">
+      <Link>Links\Helper\WAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\WIXSharpProjectFile\WIXSharpProject.cs">
+      <Link>Links\Helper\WIXSharpProject.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\BuildBootstrapperCode.cs">
+      <Link>Links\Builder\BuildBootstrapperCode.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\BuildMains.cs">
+      <Link>Links\Builder\BuildMains.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\BuildProjectCode.cs">
+      <Link>Links\Builder\BuildProjectCode.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\BuildWixBuildMethods.cs">
+      <Link>Links\Builder\BuildWixBuildMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\SharedMethods.cs">
+      <Link>Links\Builder\SharedMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\Utilities.cs">
+      <Link>Links\Builder\Utilities.cs</Link>
+    </Compile>
+    <Compile Include="..\WixSharpScriptBuilder\WixSharpScript.cs">
+      <Link>Links\Builder\WixSharpScript.cs</Link>
     </Compile>
     <Compile Include="GUIInterface.cs" />
     <Page Include="MainWindow.xaml">
@@ -174,15 +270,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WIXSharpProjectFile\WIXSharpHelper.csproj">
-      <Project>{7f66f7c9-5d01-4a82-bb93-b06ee539d95f}</Project>
-      <Name>WIXSharpHelper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WixSharpScriptBuilder\WixSharpScriptBuilder.csproj">
-      <Project>{7dcca3f0-0987-4d48-96ba-21f8f99014d7}</Project>
-      <Name>WixSharpScriptBuilder</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
