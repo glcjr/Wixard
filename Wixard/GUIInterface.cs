@@ -1749,11 +1749,14 @@ namespace Wixard
         }
         public async void CompileScript()
         {
+            string cur = Directory.GetCurrentDirectory();
             Random rand = new Random();
             if ((filledwix)||(createwxs))
             {
 
-                Setupworkingdirectory(); 
+                Setupworkingdirectory();
+              
+                Directory.SetCurrentDirectory(Workingdir);
                 Compileresult += "\nBeginning Compile...\n";
                 NotifyPropertyChanged("Compileresult");
 
@@ -1798,7 +1801,8 @@ namespace Wixard
             }
             else
                 Compileresult += "Still Downloading Wix. Try again in a second\n";
-            NotifyPropertyChanged("Compileresult");            
+            NotifyPropertyChanged("Compileresult");
+            Directory.SetCurrentDirectory(cur);
         }
         private string GetSystemWindowsForms()
         {
