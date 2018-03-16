@@ -21,6 +21,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO.Compression;
 using System.Windows.Forms;
+
 /*********************************************************************************************************************************
 Copyright and Licensing Message
 
@@ -1561,7 +1562,7 @@ namespace Wixard
             NotifySF();
 
         }
-        private string csscript = "";
+        private string csgenscript = "";
         public bool changed = false;
         #endregion
         #region scripts
@@ -1596,17 +1597,17 @@ namespace Wixard
                 NotifyPropertyChanged();
             }
         }
-        public string CsScript
+        public string CsGenScript
         {
             get
             {
-                if ((csscript == "")||(changed))
+                if ((csgenscript == "")||(changed))
                     GetFreshScript();                
-                return csscript;
+                return csgenscript;
             }
             set
             {
-                csscript = value;
+                csgenscript = value;
                 changed = false;
             }
         }
@@ -1615,16 +1616,16 @@ namespace Wixard
         {
             WixSharpScript script = new WixSharpScript(project);
             if (createmsi)
-                csscript = script.GetMSIScript();
+                csgenscript = script.GetMSIScript();
             else
-                csscript = script.GetWxsScript();
+                csgenscript = script.GetWxsScript();
             changed = false;
         }
         public Stream GetCsScriptStream()
         {            
             MemoryStream stream = new MemoryStream();
             var writer = new StreamWriter(stream);
-            writer.Write(CsScript);
+            writer.Write(CsGenScript);
             writer.Flush();
             stream.Position = 0;
             return stream;
@@ -1742,6 +1743,10 @@ namespace Wixard
             catch
             { }
         }
+        public interface WixScript
+        {
+            object Process(params object[] args);
+        }
         public async void CompileScript()
         {
             Random rand = new Random();
@@ -1749,14 +1754,18 @@ namespace Wixard
             {
 
                 Setupworkingdirectory(); 
-                Compileresult += "Beginning Compile...\n";
+                Compileresult += "\nBeginning Compile...\n";
                 NotifyPropertyChanged("Compileresult");
-            
-               
-                Compiler compile = new Compiler(CompilerLanguages.csharp, CsScript);
+
+
+
+
+
+
+                Compiler compile = new Compiler(CompilerLanguages.csharp, CsGenScript);
                 compile.AddUsefulWindowsDesktopAssemblies();
                 compile.AddAssemblyLocations(wixsharplist.ToArray());
-                if (CsScript.Contains("using System.Windows.Forms"))
+                if (CsGenScript.Contains("using System.Windows.Forms"))
                 {
                     string windowsform = GetSystemWindowsForms();
                     compile.AddAssemblyLocation(windowsform);
@@ -1781,39 +1790,11 @@ namespace Wixard
                     {
                         Compileresult += $"\nIt is located at: {Workingdir}";
                         compile = null;
-                       
-                        Cleanup(compiledfilename);                        
+
+                        Cleanup(compiledfilename);
                     }
                 }
-                //compile.Compile();
-                //if (compile.Success)
-                //{
 
-                //    compileresult += $"Compiled Successful. \n Now attempting to create the setup\n";
-                //    NotifyPropertyChanged("compileresult");
-                //    Assembly Compiled = compile.GetCompiledAssembly();
-                //    try
-                //    {
-                //        Thread.Sleep(1000);
-                //        runscript(Compiled);
-                //    }
-                //    catch
-                //    {
-                //        Thread.Sleep(1000);
-                //        try
-                //        {
-                //            runscript(Compiled);
-                //        }
-                //        catch (Exception ex)
-                //        {
-                //            compileresult += $"\nFailed to create setup. \n{ex.Message}";
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    compileresult = $"Compile Failed. {compile.GetErrorsAsString()}";
-                //}                
             }
             else
                 Compileresult += "Still Downloading Wix. Try again in a second\n";
@@ -1844,38 +1825,7 @@ namespace Wixard
                 }            
             return "";
         }
-        //private bool triedassemblydirectly = false;
-        //private void runscript(Assembly Compiled)
-        //{
-        //    Type type = Compiled.GetTypes()[0];
-        //    object obj = Activator.CreateInstance(type);
-
-
-        //    object value = type.InvokeMember("Process", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, null);
-        //    Type t = value.GetType();
-        //    if (t.Equals(typeof(CompilerErrorCollection)))
-        //        foreach (CompilerError e in (CompilerErrorCollection)value)
-        //            compileresult += e.ErrorText;
-        //    else
-        //    {
-        //        compileresult += value.ToString();
-        //        if (value.ToString().Equals("Successfully Created Script"))
-        //        {                   
-        //            compileresult += $"It is located at: {workingdir}";                    
-        //        }
-        //        else if (value.ToString().ToUpper().Contains("LOAD"))
-        //        {
-        //            if ((File.Exists(compiledfilename))&&(!triedassemblydirectly))
-        //                {
-        //                compileresult += "Attempting to launch script again.\n";
-        //                triedassemblydirectly = true;
-        //                Assembly compiled = Assembly.LoadFile(compiledfilename);
-        //                runscript(compiled);                        
-        //            }
-        //        }
-        //      //  compileresult += $"Unless changed in the editor, it is located in the {System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}\\Wixard\\{ApplicationName}{AppVersion} folder";
-        //    }         
-        //}
+        
         private void Cleanup(string file)
         {
             try
@@ -1935,3 +1885,65 @@ namespace Wixard
         #endregion
     }
 }
+// old code kept in case need for something...
+//compile.Compile();
+//if (compile.Success)
+//{
+
+//    compileresult += $"Compiled Successful. \n Now attempting to create the setup\n";
+//    NotifyPropertyChanged("compileresult");
+//    Assembly Compiled = compile.GetCompiledAssembly();
+//    try
+//    {
+//        Thread.Sleep(1000);
+//        runscript(Compiled);
+//    }
+//    catch
+//    {
+//        Thread.Sleep(1000);
+//        try
+//        {
+//            runscript(Compiled);
+//        }
+//        catch (Exception ex)
+//        {
+//            compileresult += $"\nFailed to create setup. \n{ex.Message}";
+//        }
+//    }
+//}
+//else
+//{
+//    compileresult = $"Compile Failed. {compile.GetErrorsAsString()}";
+//} 
+//private bool triedassemblydirectly = false;
+//private void runscript(Assembly Compiled)
+//{
+//    Type type = Compiled.GetTypes()[0];
+//    object obj = Activator.CreateInstance(type);
+
+
+//    object value = type.InvokeMember("Process", BindingFlags.Default | BindingFlags.InvokeMethod, null, obj, null);
+//    Type t = value.GetType();
+//    if (t.Equals(typeof(CompilerErrorCollection)))
+//        foreach (CompilerError e in (CompilerErrorCollection)value)
+//            compileresult += e.ErrorText;
+//    else
+//    {
+//        compileresult += value.ToString();
+//        if (value.ToString().Equals("Successfully Created Script"))
+//        {                   
+//            compileresult += $"It is located at: {workingdir}";                    
+//        }
+//        else if (value.ToString().ToUpper().Contains("LOAD"))
+//        {
+//            if ((File.Exists(compiledfilename))&&(!triedassemblydirectly))
+//                {
+//                compileresult += "Attempting to launch script again.\n";
+//                triedassemblydirectly = true;
+//                Assembly compiled = Assembly.LoadFile(compiledfilename);
+//                runscript(compiled);                        
+//            }
+//        }
+//      //  compileresult += $"Unless changed in the editor, it is located in the {System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}\\Wixard\\{ApplicationName}{AppVersion} folder";
+//    }         
+//}

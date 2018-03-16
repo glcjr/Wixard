@@ -782,7 +782,7 @@ namespace Wixard
 
         private void btncompile_Click(object sender, RoutedEventArgs e)
         {
-            win.CsScript = textEditor.Document.Text;
+            win.CsGenScript = textEditor.Document.Text;
             win.changed = false;
             win.CompileScript();
         
@@ -798,7 +798,11 @@ namespace Wixard
             List<string> wixsharp = win.wixsharplist;
             bool found = false;
             string location = "";
-            string targetfilename = args.Name.Substring(0, args.Name.IndexOf(","));
+            string targetfilename;
+            if (args.Name.Contains(','))
+                targetfilename = args.Name.Substring(0, args.Name.IndexOf(","));
+            else
+                targetfilename = args.Name;
             if (File.Exists($@"{win.Workingdir}/{targetfilename}.exe"))
             {
                 found = true;
@@ -811,16 +815,39 @@ namespace Wixard
             }
             if (!found)
             {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
+                path += $@"\Microsoft.NET\assembly\GAC_MSIL\{targetfilename}";
+                if (Directory.Exists(path))
+                {
+                    string[] directories = Directory.GetDirectories(path);
+                    foreach (var d in directories)
+                    {
+                        string test = d + $@"\{targetfilename}.dll";
+                        if (File.Exists(test))
+                        {
+                            found = true;
+                            location = test;
+                        }
+
+                    }
+                }
+                
+            }
+            if (!found)
+            {
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
                 path += @"\Reference Assemblies\Microsoft\Framework\.NETFramework\";
                 string[] directories = Directory.GetDirectories(path);
                 foreach (var d in directories)
                 {
-                    string test = d + $@"\{targetfilename}.dll";
-                    if (File.Exists(test))
+                    if (d.CompareTo(path + "v4.6.1") >= 0)
                     {
-                        found = true;
-                        location = test;
+                        string test = d + $@"\{targetfilename}.dll";
+                        if (File.Exists(test))
+                        {
+                            found = true;
+                            location = test;
+                        }
                     }
                 }
             }
