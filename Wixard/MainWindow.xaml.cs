@@ -817,21 +817,27 @@ namespace Wixard
             {
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
                 path += $@"\Microsoft.NET\assembly\GAC_MSIL\{targetfilename}";
-                if (Directory.Exists(path))
-                {
-                    string[] directories = Directory.GetDirectories(path);
-                    foreach (var d in directories)
-                    {
-                        string test = d + $@"\{targetfilename}.dll";
-                        if (File.Exists(test))
-                        {
-                            found = true;
-                            location = test;
-                        }
+                found = FindDll(path, targetfilename, out location);
+                //if (Directory.Exists(path))
+                //{
+                //    string[] directories = Directory.GetDirectories(path);
+                //    foreach (var d in directories)
+                //    {
+                //        string test = d + $@"\{targetfilename}.dll";
+                //        if (File.Exists(test))
+                //        {
+                //            found = true;
+                //            location = test;
+                //        }
 
-                    }
-                }
-                
+                //    }
+                //}                
+            }
+            if (!found)
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
+                path += $@"\Microsoft.NET\assembly\GAC_32\{targetfilename}";
+                found = FindDll(path, targetfilename, out location);
             }
             if (!found)
             {
@@ -869,7 +875,22 @@ namespace Wixard
             else
                 throw new Exception($"Assembly {location} not found");
         }
-
+        private bool FindDll(string path, string targetfilename, out string location)
+        {
+            bool found = false;
+            location = "";
+            string[] directories = Directory.GetDirectories(path);
+            foreach (var d in directories)
+            {               
+                    string test = d + $@"\{targetfilename}.dll";
+                    if (File.Exists(test))
+                    {
+                        found = true;
+                        location = test;
+                    }               
+            }
+            return found;
+        }
         private void btnFileOpen_Click(object sender, RoutedEventArgs e)
         {
 

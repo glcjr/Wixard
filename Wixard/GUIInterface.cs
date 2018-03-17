@@ -1760,11 +1760,6 @@ namespace Wixard
                 Compileresult += "\nBeginning Compile...\n";
                 NotifyPropertyChanged("Compileresult");
 
-
-
-
-
-
                 Compiler compile = new Compiler(CompilerLanguages.csharp, CsGenScript);
                 compile.AddUsefulWindowsDesktopAssemblies();
                 compile.AddAssemblyLocations(wixsharplist.ToArray());
