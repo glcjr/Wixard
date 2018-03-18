@@ -58,7 +58,7 @@ namespace WixSharpScriptBuilder
         }
         public static string adduninstallmethod(string installdir)
         {
-            return $"{Environment.NewLine}static void Project_AfterInstall(SetupEventArgs e){Environment.NewLine}{{ {Environment.NewLine} \tif (e.IsUninstalling) {Environment.NewLine} {{  {Environment.NewLine} \tif (System.IO.Directory.Exists(@\"{installdir}\")) {Environment.NewLine} \tSystem.IO.Directory.Delete(@\"{installdir}\", recursive: true); {Environment.NewLine} }} {Environment.NewLine} }}";
+            return $"{Environment.NewLine}static public void Project_AfterInstall(SetupEventArgs e){Environment.NewLine}{{ {Environment.NewLine} \tif (e.IsUninstalling) {Environment.NewLine} {{  {Environment.NewLine} \tif (System.IO.Directory.Exists(@\"{installdir}\")) {Environment.NewLine} \tSystem.IO.Directory.Delete(@\"{installdir}\", recursive: true); {Environment.NewLine} }} {Environment.NewLine} }}";
         }
         public static string GetCustomActions(SetupOptions Options)
         {
