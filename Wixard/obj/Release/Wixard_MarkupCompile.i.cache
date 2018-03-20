@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\App.xaml
-11151548125
+14-191012119
 235427243
-44149932317
+57-1082088318
 20397601427
-MainWindow.xaml;
+AppInfo.xaml;CertificatesPanel.xaml;CompilerOptionsPanel.xaml;ElementsPanel.xaml;EnvironmentVarsPanel.xaml;FeaturesPanel.xaml;FileAssociationsPanel.xaml;FirewallExcepPanel.xaml;MainWindow.xaml;RegistryPanel.xaml;SetUpOptions.xaml;SigningPanel.xaml;SourceFilesPanel.xaml;UsersPanel.xaml;
 
 False
 

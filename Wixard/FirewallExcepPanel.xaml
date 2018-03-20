@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="Wixard.FirewallExcepPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Label  Content="Firewall Exceptions" HorizontalAlignment="Center"/>
+        </Viewbox>
+        <Grid x:Name="FWEList" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="FWEsList" Grid.Column="1" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding FirewallExceptionlist}" SelectionChanged="FWEsList_SelectionChanged" />
+            <Grid x:Name="FWEListButtons" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1" Grid.RowSpan="3">
+                    <Button x:Name="btnAddFWE" Content="Add" MinWidth="60" Click="btnAddFWE_Click"  />
+                </Viewbox>
+                <Viewbox Grid.Row="4" Grid.RowSpan="3">
+                    <Button x:Name="btnRmvFWE" Content="Remove" MinWidth="60" Click="btnRmvFWE_Click" />
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid x:Name="AddNewFWE" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="0" Grid.Row="0">
+                <Label Content="Name:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label Content="Remote Address:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="2">
+                <Label Content="Port:" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FirewallName}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FirewallRemoteAddress}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="2">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FirewallPort}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="3" >
+                <Label Content="Custom Firewall Elements" />
+            </Viewbox>
+            <Grid x:Name="CustomFWIDs" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <ListBox x:Name="CustomFWEList" Grid.Column="0" Grid.RowSpan="4" FontSize="12" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding CustomFirewallExcept}" Height="54" VerticalAlignment="Top" SelectionChanged="CustomFWEList_SelectionChanged" />
+
+            </Grid>
+            <Viewbox Grid.Column="0" Grid.Row="6">
+                <Label  Content="Custom Label" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="7">
+                <Label  Content="Custom Value" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="6">
+                <TextBox MinWidth="160" Text="{Binding NewFWElementLabel}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="7">
+                <TextBox MinWidth="160" Text="{Binding NewFWElementValue}" />
+            </Viewbox>
+            <Viewbox Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right">
+                <Button x:Name="btnAddCustomFWE" Content="Add Cust" MinWidth="60" Click="btnAddCustomFWE_Click" />
+            </Viewbox>
+            <Viewbox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">
+                <Button x:Name="btnCancelFWE" Content="Cancel" MinWidth="60" Click="btnCancelFWE_Click" />
+            </Viewbox>
+            <Viewbox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">
+                <Button x:Name="btnRmvCustomFWE" Content="Remove" MinWidth="60" Click="btnRmvCustomFWE_Click" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="9">
+                <Button x:Name="btnupdateaddFWE" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddFWE_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="Wixard.FileAssociationsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Label  Content="File Associations" HorizontalAlignment="Center"/>
+        </Viewbox>
+        <Grid x:Name="FileAssocList" Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="FileAssocsList" Grid.Column="1" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding FileAssoclist}" SelectionChanged="FileAssocsList_SelectionChanged"  />
+            <Grid x:Name="FileAssocListButtons" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1">
+                    <Button x:Name="btnAddFileAssoc" Content="Add" MinWidth="60" Click="btnAddFileAssoc_Click" />
+                </Viewbox>
+                <Viewbox Grid.Row="2">
+                    <Button x:Name="btnRmvFileAssoc" Content="Remove" MinWidth="60" Click="btnRmvFileAssoc_Click" />
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid x:Name="AddNewFileAssoc" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="0" Grid.Row="0">
+                <Label Content="Extension:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label Content="ContentType:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="2">
+                <Label Content="Command:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="3">
+                <Label Content="Arguments:" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FAExtension}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FAContentType}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="2">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FACommand}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="3">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding FAArguments}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="5">
+                <Button x:Name="btnupdateaddFileAssoc" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddFileAssoc_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

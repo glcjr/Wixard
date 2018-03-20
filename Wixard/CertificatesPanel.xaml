@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="Wixard.CertificatesPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12*" />
+                <RowDefinition Height="60*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0">
+                <Label  Content="Certificates" HorizontalAlignment="Center"/>
+            </Viewbox>
+            <Grid x:Name="CertList" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="70*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <ListBox x:Name="CertsList" Grid.Column="1" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding Certslist}" SelectionChanged="CertsList_SelectionChanged" />
+                <Grid x:Name="ListButtons" Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Row="1">
+                        <Button x:Name="btnAddCert" Content="Add" MinWidth="60" Click="btnAddCert_Click"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="2">
+                        <Button x:Name="btnRmvCert" Content="Remove" MinWidth="60" Click="btnRmvCert_Click"/>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+            <Grid x:Name="AddNew" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*"/>
+                    <ColumnDefinition Width="60*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Column="0" Grid.Row="0">
+                    <Label x:Name="lblcertname" Content="Certificate Name:" />
+                </Viewbox>
+                <Viewbox Grid.Column="0" Grid.Row="1">
+                    <Label Content="Certificate Path:" />
+                </Viewbox>
+                <Viewbox Grid.Column="0" Grid.Row="2">
+                    <Label Content="Store Location:" />
+                </Viewbox>
+                <Viewbox Grid.Column="0" Grid.Row="3">
+                    <Label Content="Store Name:" />
+                </Viewbox>
+                <Viewbox Grid.Column="0" Grid.Row="4">
+                    <Label Content="Authority Request:" />
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="0">
+                    <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding CertificateName}" />
+                </Viewbox>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="0">
+                        <TextBox MinWidth="140" HorizontalAlignment="Left" Text="{Binding CertPath}" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="1">
+                        <Button x:Name="btnGetCerPath" MinWidth="60" Content="Find" Click="btnGetCerPath_Click" />
+                    </Viewbox>
+                </Grid>
+                <Viewbox Grid.Column="1" Grid.Row="2">
+                    <ComboBox MinWidth="160" SelectedValue="{Binding CertLocation}" >
+                        <sys:String>currentUser</sys:String>
+                        <sys:String>localMachine</sys:String>
+                    </ComboBox>
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="3">
+                    <ComboBox MinWidth="160" SelectedValue="{Binding CertStore}" >
+                        <sys:String>ca</sys:String>
+                        <sys:String>my</sys:String>
+                        <sys:String>personal</sys:String>
+                        <sys:String>request</sys:String>
+                        <sys:String>root</sys:String>
+                        <sys:String>otherPeople</sys:String>
+                        <sys:String>trustedPeople</sys:String>
+                        <sys:String>trustedPublisher</sys:String>
+                    </ComboBox>
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="4">
+                    <CheckBox IsChecked="{Binding CertAuthorityRequest}" />
+                </Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="5">
+                    <Button x:Name="btnupdateadd" Content="Add" MinWidth="100" Click="btnupdateadd_Click"/>
+                </Viewbox>
+            </Grid>
+        </Grid>
+  
+</UserControl>

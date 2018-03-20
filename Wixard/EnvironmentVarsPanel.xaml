@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="Wixard.EnvironmentVarsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Label  Content="Environment Variables" HorizontalAlignment="Center"/>
+        </Viewbox>
+        <Grid x:Name="EvarList" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="EvarsList" Grid.Column="1" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding Evarslist}" SelectionChanged="EvarsList_SelectionChanged"  />
+            <Grid x:Name="EvarListButtons" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1">
+                    <Button x:Name="btnAddEvar" Content="Add" MinWidth="60" Click="btnAddEvar_Click" />
+                </Viewbox>
+                <Viewbox Grid.Row="2">
+                    <Button x:Name="btnRmvEvar" Content="Remove" MinWidth="60" Click="btnRmvEvar_Click" />
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid x:Name="AddNewEvar" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="0" Grid.Row="0">
+                <Label Content="Name:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label Content="Directory:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="2">
+                <Label Content="Placement:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="3">
+                <Label Content="Condition:" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding EVarName}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding EVarDirectory}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="2">
+                <ComboBox MinWidth="160" HorizontalAlignment="Left" SelectedValue="{Binding EVarPlacement}">
+                    <sys:String>all</sys:String>
+                    <sys:String>first</sys:String>
+                    <sys:String>last</sys:String>
+                </ComboBox>
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="3">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding EVarCondition}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="5">
+                <Button x:Name="btnupdateaddevar" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddevar_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

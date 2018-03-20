@@ -202,7 +202,93 @@
     <Compile Include="..\WixSharpScriptBuilder\WixSharpScript.cs">
       <Link>Links\Builder\WixSharpScript.cs</Link>
     </Compile>
+    <Compile Include="AboutPanel.xaml.cs">
+      <DependentUpon>AboutPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppInfo.xaml.cs">
+      <DependentUpon>AppInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CertificatesPanel.xaml.cs">
+      <DependentUpon>CertificatesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompilerOptionsPanel.xaml.cs">
+      <DependentUpon>CompilerOptionsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditorPanel.xaml.cs">
+      <DependentUpon>EditorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ElementsPanel.xaml.cs">
+      <DependentUpon>ElementsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EnvironmentVarsPanel.xaml.cs">
+      <DependentUpon>EnvironmentVarsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FeaturesPanel.xaml.cs">
+      <DependentUpon>FeaturesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileAssociationsPanel.xaml.cs">
+      <DependentUpon>FileAssociationsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FirewallExcepPanel.xaml.cs">
+      <DependentUpon>FirewallExcepPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUIInterface.cs" />
+    <Compile Include="RegistryPanel.xaml.cs">
+      <DependentUpon>RegistryPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SetUpOptions.xaml.cs">
+      <DependentUpon>SetUpOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SigningPanel.xaml.cs">
+      <DependentUpon>SigningPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SourceFilesPanel.xaml.cs">
+      <DependentUpon>SourceFilesPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPanel.xaml.cs">
+      <DependentUpon>UsersPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WixardControl.cs" />
+    <Page Include="AboutPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AppInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CertificatesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompilerOptionsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElementsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnvironmentVarsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FeaturesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FileAssociationsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FirewallExcepPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -215,6 +301,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RegistryPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SetUpOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SigningPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SourceFilesPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

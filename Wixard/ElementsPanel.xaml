@@ -1,0 +1,173 @@
+﻿<UserControl x:Class="Wixard.ElementsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Label  Content="Wix Elements" HorizontalAlignment="Center"/>
+        </Viewbox>
+        <Grid x:Name="ElemList" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="ElemsList" Grid.Column="1" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding Elemlist}" SelectionChanged="ElemsList_SelectionChanged" />
+            <Grid x:Name="ElemListButtons" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1" Grid.RowSpan="3">
+                    <Button x:Name="btnAddElem" Content="Add" MinWidth="60" Click="btnAddElem_Click" />
+                </Viewbox>
+                <Viewbox Grid.Row="4" Grid.RowSpan="3">
+                    <Button x:Name="btnRmvElem" Content="Remove" MinWidth="60" Click="btnRmvElem_Click" />
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid x:Name="AddNewElem" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="0" Grid.Row="0">
+                <Label Content="XMLRoot:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label Content="Name:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="2">
+                <Label Content="ID:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="3">
+                <Label Content="Title:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="4">
+                <Label Content="Value:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="5">
+                <Label Content="Absent:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="6">
+                <Label Content="Level:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="7">
+                <Label Content="Guid:" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementXMLRoot}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementName}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="2">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementID}"/>
+
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="3">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementTitle}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="4">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementValue}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="5">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementAbsent}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="6">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementLevel}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="7">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding ElementGuid}" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="8" >
+                <Label Content="Custom Elements" />
+            </Viewbox>
+            <Grid x:Name="CustomIDs" Grid.Column="1" Grid.Row="8" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <ListBox x:Name="CustomElemsList" Grid.Column="0" Grid.RowSpan="4" FontSize="12" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding CustomElems}" Height="54" VerticalAlignment="Top" SelectionChanged="CustomElemsList_SelectionChanged" />
+                <Grid x:Name="CustomElemListButtons" Grid.Column="1" Grid.RowSpan="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Row="3">
+                        <Button x:Name="btnAddCustomElem" Content="Add" MinWidth="60" Click="btnAddCustomElem_Click" />
+                    </Viewbox>
+                    <Viewbox Grid.Row="1">
+                        <Button x:Name="btnCancel" Content="Cancel" MinWidth="60" Click="btnCancel_Click" />
+                    </Viewbox>
+                    <Viewbox Grid.Row="0" >
+                        <Button x:Name="btnRmvCustomElem" Content="Remove" MinWidth="60" Click="btnRmvCustomElem_Click" />
+                    </Viewbox>
+                </Grid>
+
+            </Grid>
+            <Viewbox Grid.Column="0" Grid.Row="10">
+                <Label  Content="Custom Label" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="11">
+                <Label  Content="Custom Value" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="10">
+                <TextBox MinWidth="160" Text="{Binding NewElementLabel}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="11">
+                <TextBox MinWidth="160" Text="{Binding NewElementValue}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="13">
+                <Button x:Name="btnupdateaddelem" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddelem_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

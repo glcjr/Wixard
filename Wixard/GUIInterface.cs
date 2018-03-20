@@ -306,6 +306,7 @@ namespace Wixard
                 NotifyPropertyChanged();
             }
         }
+        public bool NeedNet { get; set; } = false;
         public void NotifySetupOptions()
         {
             NotifyPropertyChanged("IncludeUninstall");
@@ -314,6 +315,7 @@ namespace Wixard
             NotifyPropertyChanged("PromptReboot");
             NotifyPropertyChanged("MinimumNet");
             NotifyPropertyChanged("InstallNet");
+            NotifyPropertyChanged("NeedNet");
         }
         #endregion
         #region SigningInfo

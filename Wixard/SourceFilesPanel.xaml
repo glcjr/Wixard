@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="Wixard.SourceFilesPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="70*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Label  Content="Source Files" HorizontalAlignment="Center"/>
+        </Viewbox>
+        <Grid x:Name="SFileList" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="SFilesList" Grid.Column="1" FontSize="20" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding Sourcefilelist}" SelectionChanged="SFilesList_SelectionChanged"   />
+            <Grid x:Name="SFListButtons" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1">
+                    <Button x:Name="btnAddSF" Content="Add" MinWidth="60" Click="btnAddSF_Click" />
+                </Viewbox>
+                <Viewbox Grid.Row="2">
+                    <Button x:Name="btnRmvSF" Content="Remove" MinWidth="60" Click="btnRmvSF_Click" />
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid x:Name="AddNewSF" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="0" Grid.Row="0">
+                <Label Content="Path:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="1">
+                <Label Content="Install Dir:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="2">
+                <Label Content="Create Menu Shortcut:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="3">
+                <Label Content="Create Desktop Shortcut:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="4">
+                <Label Content="Is Main Executable:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="5">
+                <Label Content="Is License:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="6">
+                <Label Content="Is Readme:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="7">
+                <Label Content="Feature:" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="0">
+                <Label MinWidth="160" HorizontalAlignment="Left" Content="{Binding SFPath}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding SFInstallDir}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="2">
+                <CheckBox IsChecked="{Binding SFCreateMenuShortcut}" />
+            </Viewbox>
+
+            <Viewbox Grid.Column="1" Grid.Row="3">
+                <CheckBox IsChecked="{Binding SFDesktopShortcut}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="4">
+                <CheckBox IsChecked="{Binding SFMainExecutable}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="5">
+                <CheckBox IsChecked="{Binding SFLicenseFile}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="6">
+                <CheckBox IsChecked="{Binding SFReadMeFile}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="7">
+                <ComboBox MinWidth="160" HorizontalAlignment="Left" ItemsSource="{Binding FeaturesVars}" SelectedValue="{Binding SFFeature}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="9">
+                <Button x:Name="btnupdateaddSF" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddSF_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

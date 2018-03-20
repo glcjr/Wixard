@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Wixard.CompilerOptionsPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wixard"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+            <RowDefinition Height="52*" />
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Column="1" Grid.Row="0">
+            <Label  Content="WixSharp Options" />
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="1">
+            <RadioButton x:Name="rb1wixs" GroupName="WixSharp" Content="Download from Nuget Temporary" IsChecked="{Binding  DownloadTempWixSharp}"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <RadioButton GroupName="WixSharp" Content="Download from Nuget Permanent" MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}" IsChecked="{Binding  DownloadPermWixSharp}"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="3" Grid.RowSpan="2">
+            <RadioButton GroupName="WixSharp"  MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}" Checked="RadioButton_Checked" Unchecked="RadioButton_Unchecked" IsChecked="{Binding  UseLocalWixSharp}">
+                <Grid  MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="11*" />
+                        <RowDefinition Height="18*"/>
+                        <RowDefinition Height="23*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="lblwixsharplocation" Content="{Binding WixSharpLocation}" Grid.RowSpan="2"  />
+                    <Button Grid.Row="2" x:Name="btnsetlocalwixsharp" Content="Find" Click="btnsetlocalwixsharp_Click" MaxWidth="60" IsEnabled="False" />
+                </Grid>
+            </RadioButton>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="5">
+            <Label  Content="Wix Options" />
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="6">
+            <RadioButton x:Name="rb1wix" GroupName="Wix" Content="Download from Nuget Temporary" IsChecked="{Binding  DownloadTempWix}"/>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="7">
+            <RadioButton GroupName="Wix" Content="Download from Nuget Permanent" MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}" IsChecked="{Binding  DownloadPermWix}" />
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="8" Grid.RowSpan="2">
+            <RadioButton GroupName="Wix"  MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}" IsChecked="{Binding  UseLocalWix}" Checked="RadioButton_Checked_1" Unchecked="RadioButton_Unchecked_1">
+                <Grid  MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="lblwixlocation" Content="{Binding WixLocation}"  />
+                    <Button Grid.Row="1" x:Name="btnsetlocalwix" Content="Find" MaxWidth="60" Click="btnsetlocalwix_Click" IsEnabled="False" />
+                </Grid>
+            </RadioButton>
+
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="10">
+            <Label  Content="Wix Output" />
+        </Viewbox>
+        <Grid Grid.Row="11" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="0">
+                <RadioButton GroupName="ScrType" Content="MSI" MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}" IsChecked="{Binding  CreateMSI}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1">
+                <RadioButton GroupName="ScrType" Content="WXS" MinWidth="{Binding ElementName=rb1wixs, Path=ActualWidth}" IsChecked="{Binding  CreateWXS}" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>
