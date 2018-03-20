@@ -1750,7 +1750,11 @@ namespace Wixard
         {
             object Process(params object[] args);
         }
-        public async void CompileScript()
+        public void CompileScript()
+        {
+            CompileScript(CsGenScript);
+        }
+        public async void CompileScript(string source)
         {
             string cur = Directory.GetCurrentDirectory();
             Random rand = new Random();
@@ -1763,10 +1767,10 @@ namespace Wixard
                 Compileresult += "\nBeginning Compile...\n";
                 NotifyPropertyChanged("Compileresult");
 
-                Compiler compile = new Compiler(CompilerLanguages.csharp, CsGenScript);
+                Compiler compile = new Compiler(CompilerLanguages.csharp, source);
                 compile.AddUsefulWindowsDesktopAssemblies();
                 compile.AddAssemblyLocations(wixsharplist.ToArray());
-                if (CsGenScript.Contains("using System.Windows.Forms"))
+                if (source.Contains("using System.Windows.Forms"))
                 {
                     string windowsform = GetSystemWindowsForms();
                     compile.AddAssemblyLocation(windowsform);
@@ -1795,7 +1799,6 @@ namespace Wixard
                         Cleanup(compiledfilename);
                     }
                 }
-
             }
             else
                 Compileresult += "Still Downloading Wix. Try again in a second\n";

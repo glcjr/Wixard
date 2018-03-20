@@ -203,9 +203,8 @@ namespace Wixard
         }              
         private void btncompile_Click(object sender, RoutedEventArgs e)
         {
-            win.CsGenScript = EditorControl.EditorSource;
-            win.changed = false;
-            win.CompileScript();        
+            
+            win.CompileScript(EditorControl.EditorSource);        
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
