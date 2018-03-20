@@ -100,14 +100,9 @@
                     </Viewbox>
                     <Viewbox>
                         <Button x:Name="btnEles" Content="Wix Elements" MinWidth="{Binding ElementName=btnFW, Path=ActualWidth}" Click="btnEles_Click" />
-                    </Viewbox>
-                    
-                    
+                    </Viewbox>                  
                 </StackPanel>
-
-
             </Grid>
-
             <Grid x:Name="AppInfo" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="40*"/>

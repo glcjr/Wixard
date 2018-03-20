@@ -206,7 +206,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 111 "..\..\MainWindow.xaml"
+        #line 106 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AppInfo;
         
@@ -214,7 +214,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 147 "..\..\MainWindow.xaml"
+        #line 142 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtAppName;
         
@@ -222,7 +222,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 150 "..\..\MainWindow.xaml"
+        #line 145 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtAppVersion;
         
@@ -230,7 +230,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 153 "..\..\MainWindow.xaml"
+        #line 148 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtPubName;
         
@@ -238,7 +238,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 156 "..\..\MainWindow.xaml"
+        #line 151 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtHelpLink;
         
@@ -246,7 +246,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 168 "..\..\MainWindow.xaml"
+        #line 163 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image Appicon;
         
@@ -254,7 +254,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 171 "..\..\MainWindow.xaml"
+        #line 166 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnchangeicon;
         
@@ -262,7 +262,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 175 "..\..\MainWindow.xaml"
+        #line 170 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid SetupOptionsPanel;
         
@@ -270,7 +270,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 196 "..\..\MainWindow.xaml"
+        #line 191 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox cbincludeuninstall;
         
@@ -278,7 +278,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 199 "..\..\MainWindow.xaml"
+        #line 194 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox cboptionalshortcut;
         
@@ -286,7 +286,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 202 "..\..\MainWindow.xaml"
+        #line 197 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox cb64bit;
         
@@ -294,7 +294,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 205 "..\..\MainWindow.xaml"
+        #line 200 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox cbpromptforreboot;
         
@@ -302,7 +302,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 208 "..\..\MainWindow.xaml"
+        #line 203 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox cbnetframework;
         
@@ -310,7 +310,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 210 "..\..\MainWindow.xaml"
+        #line 205 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid NetFrameworkPanel;
         
@@ -318,7 +318,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 223 "..\..\MainWindow.xaml"
+        #line 218 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox comborequirednet;
         
@@ -326,7 +326,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 229 "..\..\MainWindow.xaml"
+        #line 224 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox comboinstallnet;
         
@@ -334,7 +334,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 233 "..\..\MainWindow.xaml"
+        #line 228 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid SigningPanel;
         
@@ -342,7 +342,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 269 "..\..\MainWindow.xaml"
+        #line 264 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtCertPath;
         
@@ -350,7 +350,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 272 "..\..\MainWindow.xaml"
+        #line 267 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtPasswprd;
         
@@ -358,7 +358,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 275 "..\..\MainWindow.xaml"
+        #line 270 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txttimestamp;
         
@@ -366,7 +366,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 278 "..\..\MainWindow.xaml"
+        #line 273 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtoptions;
         
@@ -374,7 +374,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 281 "..\..\MainWindow.xaml"
+        #line 276 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CertificatesGrid;
         
@@ -382,7 +382,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 291 "..\..\MainWindow.xaml"
+        #line 286 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CertList;
         
@@ -390,7 +390,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 297 "..\..\MainWindow.xaml"
+        #line 292 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox CertsList;
         
@@ -398,7 +398,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 298 "..\..\MainWindow.xaml"
+        #line 293 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid ListButtons;
         
@@ -406,7 +406,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 309 "..\..\MainWindow.xaml"
+        #line 304 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddCert;
         
@@ -414,7 +414,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 312 "..\..\MainWindow.xaml"
+        #line 307 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvCert;
         
@@ -422,7 +422,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 316 "..\..\MainWindow.xaml"
+        #line 311 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNew;
         
@@ -430,7 +430,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 330 "..\..\MainWindow.xaml"
+        #line 325 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblcertname;
         
@@ -438,7 +438,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 356 "..\..\MainWindow.xaml"
+        #line 351 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnGetCerPath;
         
@@ -446,7 +446,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 381 "..\..\MainWindow.xaml"
+        #line 376 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateadd;
         
@@ -454,7 +454,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 385 "..\..\MainWindow.xaml"
+        #line 380 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid UsersGrid;
         
@@ -462,7 +462,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 395 "..\..\MainWindow.xaml"
+        #line 390 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid UserList;
         
@@ -470,7 +470,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 401 "..\..\MainWindow.xaml"
+        #line 396 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox UsersList;
         
@@ -478,7 +478,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 402 "..\..\MainWindow.xaml"
+        #line 397 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid UserListButtons;
         
@@ -486,7 +486,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 413 "..\..\MainWindow.xaml"
+        #line 408 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddUser;
         
@@ -494,7 +494,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 416 "..\..\MainWindow.xaml"
+        #line 411 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvUser;
         
@@ -502,7 +502,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 420 "..\..\MainWindow.xaml"
+        #line 415 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewUser;
         
@@ -510,7 +510,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 461 "..\..\MainWindow.xaml"
+        #line 456 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateadduser;
         
@@ -518,7 +518,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 465 "..\..\MainWindow.xaml"
+        #line 460 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid EvarsGrid;
         
@@ -526,7 +526,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 475 "..\..\MainWindow.xaml"
+        #line 470 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid EvarList;
         
@@ -534,7 +534,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 481 "..\..\MainWindow.xaml"
+        #line 476 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox EvarsList;
         
@@ -542,7 +542,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 482 "..\..\MainWindow.xaml"
+        #line 477 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid EvarListButtons;
         
@@ -550,7 +550,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 493 "..\..\MainWindow.xaml"
+        #line 488 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddEvar;
         
@@ -558,7 +558,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 496 "..\..\MainWindow.xaml"
+        #line 491 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvEvar;
         
@@ -566,7 +566,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 500 "..\..\MainWindow.xaml"
+        #line 495 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewEvar;
         
@@ -574,7 +574,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 545 "..\..\MainWindow.xaml"
+        #line 540 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddevar;
         
@@ -582,7 +582,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 549 "..\..\MainWindow.xaml"
+        #line 544 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid ElemsGrid;
         
@@ -590,7 +590,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 559 "..\..\MainWindow.xaml"
+        #line 554 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid ElemList;
         
@@ -598,7 +598,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 565 "..\..\MainWindow.xaml"
+        #line 560 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox ElemsList;
         
@@ -606,7 +606,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 566 "..\..\MainWindow.xaml"
+        #line 561 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid ElemListButtons;
         
@@ -614,7 +614,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 577 "..\..\MainWindow.xaml"
+        #line 572 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddElem;
         
@@ -622,7 +622,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 580 "..\..\MainWindow.xaml"
+        #line 575 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvElem;
         
@@ -630,7 +630,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 584 "..\..\MainWindow.xaml"
+        #line 579 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewElem;
         
@@ -638,7 +638,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 664 "..\..\MainWindow.xaml"
+        #line 659 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CustomIDs;
         
@@ -646,7 +646,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 676 "..\..\MainWindow.xaml"
+        #line 671 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox CustomElemsList;
         
@@ -654,7 +654,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 677 "..\..\MainWindow.xaml"
+        #line 672 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CustomElemListButtons;
         
@@ -662,7 +662,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 685 "..\..\MainWindow.xaml"
+        #line 680 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddCustomElem;
         
@@ -670,7 +670,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 688 "..\..\MainWindow.xaml"
+        #line 683 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnCancel;
         
@@ -678,7 +678,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 691 "..\..\MainWindow.xaml"
+        #line 686 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvCustomElem;
         
@@ -686,7 +686,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 709 "..\..\MainWindow.xaml"
+        #line 704 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddelem;
         
@@ -694,7 +694,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 713 "..\..\MainWindow.xaml"
+        #line 708 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FeatGrid;
         
@@ -702,7 +702,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 723 "..\..\MainWindow.xaml"
+        #line 718 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FeatList;
         
@@ -710,7 +710,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 729 "..\..\MainWindow.xaml"
+        #line 724 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox FeatsList;
         
@@ -718,7 +718,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 730 "..\..\MainWindow.xaml"
+        #line 725 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FeatureListButtons;
         
@@ -726,7 +726,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 741 "..\..\MainWindow.xaml"
+        #line 736 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddFeature;
         
@@ -734,7 +734,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 744 "..\..\MainWindow.xaml"
+        #line 739 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvFeature;
         
@@ -742,7 +742,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 748 "..\..\MainWindow.xaml"
+        #line 743 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewFeature;
         
@@ -750,7 +750,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 804 "..\..\MainWindow.xaml"
+        #line 799 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddfeat;
         
@@ -758,7 +758,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 808 "..\..\MainWindow.xaml"
+        #line 803 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FWEGrid;
         
@@ -766,7 +766,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 818 "..\..\MainWindow.xaml"
+        #line 813 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FWEList;
         
@@ -774,7 +774,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 824 "..\..\MainWindow.xaml"
+        #line 819 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox FWEsList;
         
@@ -782,7 +782,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 825 "..\..\MainWindow.xaml"
+        #line 820 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FWEListButtons;
         
@@ -790,7 +790,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 836 "..\..\MainWindow.xaml"
+        #line 831 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddFWE;
         
@@ -798,7 +798,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 839 "..\..\MainWindow.xaml"
+        #line 834 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvFWE;
         
@@ -806,7 +806,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 843 "..\..\MainWindow.xaml"
+        #line 838 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewFWE;
         
@@ -814,7 +814,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 885 "..\..\MainWindow.xaml"
+        #line 880 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CustomFWIDs;
         
@@ -822,7 +822,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 897 "..\..\MainWindow.xaml"
+        #line 892 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox CustomFWEList;
         
@@ -830,7 +830,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 913 "..\..\MainWindow.xaml"
+        #line 908 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddCustomFWE;
         
@@ -838,7 +838,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 916 "..\..\MainWindow.xaml"
+        #line 911 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnCancelFWE;
         
@@ -846,7 +846,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 919 "..\..\MainWindow.xaml"
+        #line 914 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvCustomFWE;
         
@@ -854,7 +854,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 922 "..\..\MainWindow.xaml"
+        #line 917 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddFWE;
         
@@ -862,7 +862,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 926 "..\..\MainWindow.xaml"
+        #line 921 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid RegistryValsGrid;
         
@@ -870,7 +870,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 936 "..\..\MainWindow.xaml"
+        #line 931 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid RegVarList;
         
@@ -878,7 +878,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 942 "..\..\MainWindow.xaml"
+        #line 937 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox RegVarsList;
         
@@ -886,7 +886,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 943 "..\..\MainWindow.xaml"
+        #line 938 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid RegVarListButtons;
         
@@ -894,7 +894,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 954 "..\..\MainWindow.xaml"
+        #line 949 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddRegVar;
         
@@ -902,7 +902,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 957 "..\..\MainWindow.xaml"
+        #line 952 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvRegVar;
         
@@ -910,7 +910,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 961 "..\..\MainWindow.xaml"
+        #line 956 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewRegVar;
         
@@ -918,7 +918,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 995 "..\..\MainWindow.xaml"
+        #line 990 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cbRegHive;
         
@@ -926,7 +926,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1002 "..\..\MainWindow.xaml"
+        #line 997 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddRegVar;
         
@@ -934,7 +934,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1006 "..\..\MainWindow.xaml"
+        #line 1001 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FileAssocGrid;
         
@@ -942,7 +942,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1016 "..\..\MainWindow.xaml"
+        #line 1011 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FileAssocList;
         
@@ -950,7 +950,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1022 "..\..\MainWindow.xaml"
+        #line 1017 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox FileAssocsList;
         
@@ -958,7 +958,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1023 "..\..\MainWindow.xaml"
+        #line 1018 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid FileAssocListButtons;
         
@@ -966,7 +966,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1034 "..\..\MainWindow.xaml"
+        #line 1029 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddFileAssoc;
         
@@ -974,7 +974,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1037 "..\..\MainWindow.xaml"
+        #line 1032 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvFileAssoc;
         
@@ -982,7 +982,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1041 "..\..\MainWindow.xaml"
+        #line 1036 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewFileAssoc;
         
@@ -990,7 +990,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1082 "..\..\MainWindow.xaml"
+        #line 1077 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddFileAssoc;
         
@@ -998,7 +998,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1086 "..\..\MainWindow.xaml"
+        #line 1081 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid SFilesGrid;
         
@@ -1006,7 +1006,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1096 "..\..\MainWindow.xaml"
+        #line 1091 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid SFileList;
         
@@ -1014,7 +1014,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1102 "..\..\MainWindow.xaml"
+        #line 1097 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox SFilesList;
         
@@ -1022,7 +1022,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1103 "..\..\MainWindow.xaml"
+        #line 1098 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid SFListButtons;
         
@@ -1030,7 +1030,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1114 "..\..\MainWindow.xaml"
+        #line 1109 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAddSF;
         
@@ -1038,7 +1038,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1117 "..\..\MainWindow.xaml"
+        #line 1112 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRmvSF;
         
@@ -1046,7 +1046,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1121 "..\..\MainWindow.xaml"
+        #line 1116 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AddNewSF;
         
@@ -1054,7 +1054,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1190 "..\..\MainWindow.xaml"
+        #line 1185 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnupdateaddSF;
         
@@ -1062,7 +1062,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1194 "..\..\MainWindow.xaml"
+        #line 1189 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CompileOptionsGrid;
         
@@ -1070,7 +1070,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1219 "..\..\MainWindow.xaml"
+        #line 1214 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton rb1wixs;
         
@@ -1078,7 +1078,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1232 "..\..\MainWindow.xaml"
+        #line 1227 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblwixsharplocation;
         
@@ -1086,7 +1086,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1233 "..\..\MainWindow.xaml"
+        #line 1228 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnsetlocalwixsharp;
         
@@ -1094,7 +1094,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1241 "..\..\MainWindow.xaml"
+        #line 1236 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton rb1wix;
         
@@ -1102,7 +1102,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1253 "..\..\MainWindow.xaml"
+        #line 1248 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblwixlocation;
         
@@ -1110,7 +1110,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1254 "..\..\MainWindow.xaml"
+        #line 1249 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnsetlocalwix;
         
@@ -1118,7 +1118,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1275 "..\..\MainWindow.xaml"
+        #line 1270 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid EditorGrid;
         
@@ -1126,7 +1126,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1284 "..\..\MainWindow.xaml"
+        #line 1279 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal ICSharpCode.AvalonEdit.TextEditor textEditor;
         
@@ -1134,7 +1134,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1301 "..\..\MainWindow.xaml"
+        #line 1296 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnEditorCopy;
         
@@ -1142,7 +1142,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1306 "..\..\MainWindow.xaml"
+        #line 1301 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnEditorPaste;
         
@@ -1150,7 +1150,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1311 "..\..\MainWindow.xaml"
+        #line 1306 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnEditorCut;
         
@@ -1158,7 +1158,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1316 "..\..\MainWindow.xaml"
+        #line 1311 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnEditorSelectAll;
         
@@ -1166,7 +1166,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1324 "..\..\MainWindow.xaml"
+        #line 1319 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid AboutGrid;
         
@@ -1174,7 +1174,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1348 "..\..\MainWindow.xaml"
+        #line 1343 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblVersion;
         
@@ -1182,7 +1182,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1357 "..\..\MainWindow.xaml"
+        #line 1352 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnGithub;
         
@@ -1190,7 +1190,7 @@ namespace Wixard {
         #line hidden
         
         
-        #line 1360 "..\..\MainWindow.xaml"
+        #line 1355 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnDonate;
         
@@ -1430,7 +1430,7 @@ namespace Wixard {
             case 28:
             this.btnchangeicon = ((System.Windows.Controls.Button)(target));
             
-            #line 171 "..\..\MainWindow.xaml"
+            #line 166 "..\..\MainWindow.xaml"
             this.btnchangeicon.Click += new System.Windows.RoutedEventHandler(this.Btnchangeicon_Click);
             
             #line default
@@ -1454,13 +1454,13 @@ namespace Wixard {
             case 34:
             this.cbnetframework = ((System.Windows.Controls.CheckBox)(target));
             
-            #line 208 "..\..\MainWindow.xaml"
+            #line 203 "..\..\MainWindow.xaml"
             this.cbnetframework.Checked += new System.Windows.RoutedEventHandler(this.cbnetframework_Checked);
             
             #line default
             #line hidden
             
-            #line 208 "..\..\MainWindow.xaml"
+            #line 203 "..\..\MainWindow.xaml"
             this.cbnetframework.Click += new System.Windows.RoutedEventHandler(this.cbnetframework_Checked);
             
             #line default
@@ -1499,7 +1499,7 @@ namespace Wixard {
             case 45:
             this.CertsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 297 "..\..\MainWindow.xaml"
+            #line 292 "..\..\MainWindow.xaml"
             this.CertsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.CertsList_SelectionChanged);
             
             #line default
@@ -1511,7 +1511,7 @@ namespace Wixard {
             case 47:
             this.btnAddCert = ((System.Windows.Controls.Button)(target));
             
-            #line 309 "..\..\MainWindow.xaml"
+            #line 304 "..\..\MainWindow.xaml"
             this.btnAddCert.Click += new System.Windows.RoutedEventHandler(this.btnAddCert_Click);
             
             #line default
@@ -1520,7 +1520,7 @@ namespace Wixard {
             case 48:
             this.btnRmvCert = ((System.Windows.Controls.Button)(target));
             
-            #line 312 "..\..\MainWindow.xaml"
+            #line 307 "..\..\MainWindow.xaml"
             this.btnRmvCert.Click += new System.Windows.RoutedEventHandler(this.btnRmvCert_Click);
             
             #line default
@@ -1535,7 +1535,7 @@ namespace Wixard {
             case 51:
             this.btnGetCerPath = ((System.Windows.Controls.Button)(target));
             
-            #line 356 "..\..\MainWindow.xaml"
+            #line 351 "..\..\MainWindow.xaml"
             this.btnGetCerPath.Click += new System.Windows.RoutedEventHandler(this.btnGetCerPath_Click);
             
             #line default
@@ -1544,7 +1544,7 @@ namespace Wixard {
             case 52:
             this.btnupdateadd = ((System.Windows.Controls.Button)(target));
             
-            #line 381 "..\..\MainWindow.xaml"
+            #line 376 "..\..\MainWindow.xaml"
             this.btnupdateadd.Click += new System.Windows.RoutedEventHandler(this.btnupdateadd_Click);
             
             #line default
@@ -1559,7 +1559,7 @@ namespace Wixard {
             case 55:
             this.UsersList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 401 "..\..\MainWindow.xaml"
+            #line 396 "..\..\MainWindow.xaml"
             this.UsersList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.UsersList_SelectionChanged);
             
             #line default
@@ -1571,7 +1571,7 @@ namespace Wixard {
             case 57:
             this.btnAddUser = ((System.Windows.Controls.Button)(target));
             
-            #line 413 "..\..\MainWindow.xaml"
+            #line 408 "..\..\MainWindow.xaml"
             this.btnAddUser.Click += new System.Windows.RoutedEventHandler(this.btnAddUser_Click);
             
             #line default
@@ -1580,7 +1580,7 @@ namespace Wixard {
             case 58:
             this.btnRmvUser = ((System.Windows.Controls.Button)(target));
             
-            #line 416 "..\..\MainWindow.xaml"
+            #line 411 "..\..\MainWindow.xaml"
             this.btnRmvUser.Click += new System.Windows.RoutedEventHandler(this.btnRmvUser_Click);
             
             #line default
@@ -1592,7 +1592,7 @@ namespace Wixard {
             case 60:
             this.btnupdateadduser = ((System.Windows.Controls.Button)(target));
             
-            #line 461 "..\..\MainWindow.xaml"
+            #line 456 "..\..\MainWindow.xaml"
             this.btnupdateadduser.Click += new System.Windows.RoutedEventHandler(this.btnupdateadduser_Click);
             
             #line default
@@ -1607,7 +1607,7 @@ namespace Wixard {
             case 63:
             this.EvarsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 481 "..\..\MainWindow.xaml"
+            #line 476 "..\..\MainWindow.xaml"
             this.EvarsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.EvarsList_SelectionChanged);
             
             #line default
@@ -1619,7 +1619,7 @@ namespace Wixard {
             case 65:
             this.btnAddEvar = ((System.Windows.Controls.Button)(target));
             
-            #line 493 "..\..\MainWindow.xaml"
+            #line 488 "..\..\MainWindow.xaml"
             this.btnAddEvar.Click += new System.Windows.RoutedEventHandler(this.btnAddEvar_Click);
             
             #line default
@@ -1628,7 +1628,7 @@ namespace Wixard {
             case 66:
             this.btnRmvEvar = ((System.Windows.Controls.Button)(target));
             
-            #line 496 "..\..\MainWindow.xaml"
+            #line 491 "..\..\MainWindow.xaml"
             this.btnRmvEvar.Click += new System.Windows.RoutedEventHandler(this.btnRmvEvar_Click);
             
             #line default
@@ -1640,7 +1640,7 @@ namespace Wixard {
             case 68:
             this.btnupdateaddevar = ((System.Windows.Controls.Button)(target));
             
-            #line 545 "..\..\MainWindow.xaml"
+            #line 540 "..\..\MainWindow.xaml"
             this.btnupdateaddevar.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddevar_Click);
             
             #line default
@@ -1655,7 +1655,7 @@ namespace Wixard {
             case 71:
             this.ElemsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 565 "..\..\MainWindow.xaml"
+            #line 560 "..\..\MainWindow.xaml"
             this.ElemsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.ElemsList_SelectionChanged);
             
             #line default
@@ -1667,7 +1667,7 @@ namespace Wixard {
             case 73:
             this.btnAddElem = ((System.Windows.Controls.Button)(target));
             
-            #line 577 "..\..\MainWindow.xaml"
+            #line 572 "..\..\MainWindow.xaml"
             this.btnAddElem.Click += new System.Windows.RoutedEventHandler(this.btnAddElem_Click);
             
             #line default
@@ -1676,7 +1676,7 @@ namespace Wixard {
             case 74:
             this.btnRmvElem = ((System.Windows.Controls.Button)(target));
             
-            #line 580 "..\..\MainWindow.xaml"
+            #line 575 "..\..\MainWindow.xaml"
             this.btnRmvElem.Click += new System.Windows.RoutedEventHandler(this.btnRmvElem_Click);
             
             #line default
@@ -1691,7 +1691,7 @@ namespace Wixard {
             case 77:
             this.CustomElemsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 676 "..\..\MainWindow.xaml"
+            #line 671 "..\..\MainWindow.xaml"
             this.CustomElemsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.CustomElemsList_SelectionChanged);
             
             #line default
@@ -1703,7 +1703,7 @@ namespace Wixard {
             case 79:
             this.btnAddCustomElem = ((System.Windows.Controls.Button)(target));
             
-            #line 685 "..\..\MainWindow.xaml"
+            #line 680 "..\..\MainWindow.xaml"
             this.btnAddCustomElem.Click += new System.Windows.RoutedEventHandler(this.btnAddCustomElem_Click);
             
             #line default
@@ -1712,7 +1712,7 @@ namespace Wixard {
             case 80:
             this.btnCancel = ((System.Windows.Controls.Button)(target));
             
-            #line 688 "..\..\MainWindow.xaml"
+            #line 683 "..\..\MainWindow.xaml"
             this.btnCancel.Click += new System.Windows.RoutedEventHandler(this.btnCancel_Click);
             
             #line default
@@ -1721,7 +1721,7 @@ namespace Wixard {
             case 81:
             this.btnRmvCustomElem = ((System.Windows.Controls.Button)(target));
             
-            #line 691 "..\..\MainWindow.xaml"
+            #line 686 "..\..\MainWindow.xaml"
             this.btnRmvCustomElem.Click += new System.Windows.RoutedEventHandler(this.btnRmvCustomElem_Click);
             
             #line default
@@ -1730,7 +1730,7 @@ namespace Wixard {
             case 82:
             this.btnupdateaddelem = ((System.Windows.Controls.Button)(target));
             
-            #line 709 "..\..\MainWindow.xaml"
+            #line 704 "..\..\MainWindow.xaml"
             this.btnupdateaddelem.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddelem_Click);
             
             #line default
@@ -1745,7 +1745,7 @@ namespace Wixard {
             case 85:
             this.FeatsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 729 "..\..\MainWindow.xaml"
+            #line 724 "..\..\MainWindow.xaml"
             this.FeatsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.FeatsList_SelectionChanged);
             
             #line default
@@ -1757,7 +1757,7 @@ namespace Wixard {
             case 87:
             this.btnAddFeature = ((System.Windows.Controls.Button)(target));
             
-            #line 741 "..\..\MainWindow.xaml"
+            #line 736 "..\..\MainWindow.xaml"
             this.btnAddFeature.Click += new System.Windows.RoutedEventHandler(this.btnAddFeature_Click);
             
             #line default
@@ -1766,7 +1766,7 @@ namespace Wixard {
             case 88:
             this.btnRmvFeature = ((System.Windows.Controls.Button)(target));
             
-            #line 744 "..\..\MainWindow.xaml"
+            #line 739 "..\..\MainWindow.xaml"
             this.btnRmvFeature.Click += new System.Windows.RoutedEventHandler(this.btnRmvFeature_Click);
             
             #line default
@@ -1778,7 +1778,7 @@ namespace Wixard {
             case 90:
             this.btnupdateaddfeat = ((System.Windows.Controls.Button)(target));
             
-            #line 804 "..\..\MainWindow.xaml"
+            #line 799 "..\..\MainWindow.xaml"
             this.btnupdateaddfeat.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddfeat_Click);
             
             #line default
@@ -1793,7 +1793,7 @@ namespace Wixard {
             case 93:
             this.FWEsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 824 "..\..\MainWindow.xaml"
+            #line 819 "..\..\MainWindow.xaml"
             this.FWEsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.FWEsList_SelectionChanged);
             
             #line default
@@ -1805,7 +1805,7 @@ namespace Wixard {
             case 95:
             this.btnAddFWE = ((System.Windows.Controls.Button)(target));
             
-            #line 836 "..\..\MainWindow.xaml"
+            #line 831 "..\..\MainWindow.xaml"
             this.btnAddFWE.Click += new System.Windows.RoutedEventHandler(this.btnAddFWE_Click);
             
             #line default
@@ -1814,7 +1814,7 @@ namespace Wixard {
             case 96:
             this.btnRmvFWE = ((System.Windows.Controls.Button)(target));
             
-            #line 839 "..\..\MainWindow.xaml"
+            #line 834 "..\..\MainWindow.xaml"
             this.btnRmvFWE.Click += new System.Windows.RoutedEventHandler(this.btnRmvFWE_Click);
             
             #line default
@@ -1829,7 +1829,7 @@ namespace Wixard {
             case 99:
             this.CustomFWEList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 897 "..\..\MainWindow.xaml"
+            #line 892 "..\..\MainWindow.xaml"
             this.CustomFWEList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.CustomFWEList_SelectionChanged);
             
             #line default
@@ -1838,7 +1838,7 @@ namespace Wixard {
             case 100:
             this.btnAddCustomFWE = ((System.Windows.Controls.Button)(target));
             
-            #line 913 "..\..\MainWindow.xaml"
+            #line 908 "..\..\MainWindow.xaml"
             this.btnAddCustomFWE.Click += new System.Windows.RoutedEventHandler(this.btnAddCustomFWE_Click);
             
             #line default
@@ -1847,7 +1847,7 @@ namespace Wixard {
             case 101:
             this.btnCancelFWE = ((System.Windows.Controls.Button)(target));
             
-            #line 916 "..\..\MainWindow.xaml"
+            #line 911 "..\..\MainWindow.xaml"
             this.btnCancelFWE.Click += new System.Windows.RoutedEventHandler(this.btnCancelFWE_Click);
             
             #line default
@@ -1856,7 +1856,7 @@ namespace Wixard {
             case 102:
             this.btnRmvCustomFWE = ((System.Windows.Controls.Button)(target));
             
-            #line 919 "..\..\MainWindow.xaml"
+            #line 914 "..\..\MainWindow.xaml"
             this.btnRmvCustomFWE.Click += new System.Windows.RoutedEventHandler(this.btnRmvCustomFWE_Click);
             
             #line default
@@ -1865,7 +1865,7 @@ namespace Wixard {
             case 103:
             this.btnupdateaddFWE = ((System.Windows.Controls.Button)(target));
             
-            #line 922 "..\..\MainWindow.xaml"
+            #line 917 "..\..\MainWindow.xaml"
             this.btnupdateaddFWE.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddFWE_Click);
             
             #line default
@@ -1880,7 +1880,7 @@ namespace Wixard {
             case 106:
             this.RegVarsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 942 "..\..\MainWindow.xaml"
+            #line 937 "..\..\MainWindow.xaml"
             this.RegVarsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.RegVarsList_SelectionChanged);
             
             #line default
@@ -1892,7 +1892,7 @@ namespace Wixard {
             case 108:
             this.btnAddRegVar = ((System.Windows.Controls.Button)(target));
             
-            #line 954 "..\..\MainWindow.xaml"
+            #line 949 "..\..\MainWindow.xaml"
             this.btnAddRegVar.Click += new System.Windows.RoutedEventHandler(this.btnAddRegVar_Click);
             
             #line default
@@ -1901,7 +1901,7 @@ namespace Wixard {
             case 109:
             this.btnRmvRegVar = ((System.Windows.Controls.Button)(target));
             
-            #line 957 "..\..\MainWindow.xaml"
+            #line 952 "..\..\MainWindow.xaml"
             this.btnRmvRegVar.Click += new System.Windows.RoutedEventHandler(this.btnRmvRegVar_Click);
             
             #line default
@@ -1916,7 +1916,7 @@ namespace Wixard {
             case 112:
             this.btnupdateaddRegVar = ((System.Windows.Controls.Button)(target));
             
-            #line 1002 "..\..\MainWindow.xaml"
+            #line 997 "..\..\MainWindow.xaml"
             this.btnupdateaddRegVar.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddRegVar_Click);
             
             #line default
@@ -1931,7 +1931,7 @@ namespace Wixard {
             case 115:
             this.FileAssocsList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 1022 "..\..\MainWindow.xaml"
+            #line 1017 "..\..\MainWindow.xaml"
             this.FileAssocsList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.FileAssocsList_SelectionChanged);
             
             #line default
@@ -1943,7 +1943,7 @@ namespace Wixard {
             case 117:
             this.btnAddFileAssoc = ((System.Windows.Controls.Button)(target));
             
-            #line 1034 "..\..\MainWindow.xaml"
+            #line 1029 "..\..\MainWindow.xaml"
             this.btnAddFileAssoc.Click += new System.Windows.RoutedEventHandler(this.btnAddFileAssoc_Click);
             
             #line default
@@ -1952,7 +1952,7 @@ namespace Wixard {
             case 118:
             this.btnRmvFileAssoc = ((System.Windows.Controls.Button)(target));
             
-            #line 1037 "..\..\MainWindow.xaml"
+            #line 1032 "..\..\MainWindow.xaml"
             this.btnRmvFileAssoc.Click += new System.Windows.RoutedEventHandler(this.btnRmvFileAssoc_Click);
             
             #line default
@@ -1964,7 +1964,7 @@ namespace Wixard {
             case 120:
             this.btnupdateaddFileAssoc = ((System.Windows.Controls.Button)(target));
             
-            #line 1082 "..\..\MainWindow.xaml"
+            #line 1077 "..\..\MainWindow.xaml"
             this.btnupdateaddFileAssoc.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddFileAssoc_Click);
             
             #line default
@@ -1979,7 +1979,7 @@ namespace Wixard {
             case 123:
             this.SFilesList = ((System.Windows.Controls.ListBox)(target));
             
-            #line 1102 "..\..\MainWindow.xaml"
+            #line 1097 "..\..\MainWindow.xaml"
             this.SFilesList.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.SFilesList_SelectionChanged);
             
             #line default
@@ -1991,7 +1991,7 @@ namespace Wixard {
             case 125:
             this.btnAddSF = ((System.Windows.Controls.Button)(target));
             
-            #line 1114 "..\..\MainWindow.xaml"
+            #line 1109 "..\..\MainWindow.xaml"
             this.btnAddSF.Click += new System.Windows.RoutedEventHandler(this.btnAddSF_Click);
             
             #line default
@@ -2000,7 +2000,7 @@ namespace Wixard {
             case 126:
             this.btnRmvSF = ((System.Windows.Controls.Button)(target));
             
-            #line 1117 "..\..\MainWindow.xaml"
+            #line 1112 "..\..\MainWindow.xaml"
             this.btnRmvSF.Click += new System.Windows.RoutedEventHandler(this.btnRmvSF_Click);
             
             #line default
@@ -2012,7 +2012,7 @@ namespace Wixard {
             case 128:
             this.btnupdateaddSF = ((System.Windows.Controls.Button)(target));
             
-            #line 1190 "..\..\MainWindow.xaml"
+            #line 1185 "..\..\MainWindow.xaml"
             this.btnupdateaddSF.Click += new System.Windows.RoutedEventHandler(this.btnupdateaddSF_Click);
             
             #line default
@@ -2026,13 +2026,13 @@ namespace Wixard {
             return;
             case 131:
             
-            #line 1225 "..\..\MainWindow.xaml"
+            #line 1220 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.RadioButton)(target)).Checked += new System.Windows.RoutedEventHandler(this.RadioButton_Checked);
             
             #line default
             #line hidden
             
-            #line 1225 "..\..\MainWindow.xaml"
+            #line 1220 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.RadioButton)(target)).Unchecked += new System.Windows.RoutedEventHandler(this.RadioButton_Unchecked);
             
             #line default
@@ -2044,7 +2044,7 @@ namespace Wixard {
             case 133:
             this.btnsetlocalwixsharp = ((System.Windows.Controls.Button)(target));
             
-            #line 1233 "..\..\MainWindow.xaml"
+            #line 1228 "..\..\MainWindow.xaml"
             this.btnsetlocalwixsharp.Click += new System.Windows.RoutedEventHandler(this.btnsetlocalwixsharp_Click);
             
             #line default
@@ -2055,13 +2055,13 @@ namespace Wixard {
             return;
             case 135:
             
-            #line 1247 "..\..\MainWindow.xaml"
+            #line 1242 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.RadioButton)(target)).Checked += new System.Windows.RoutedEventHandler(this.RadioButton_Checked_1);
             
             #line default
             #line hidden
             
-            #line 1247 "..\..\MainWindow.xaml"
+            #line 1242 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.RadioButton)(target)).Unchecked += new System.Windows.RoutedEventHandler(this.RadioButton_Unchecked_1);
             
             #line default
@@ -2073,7 +2073,7 @@ namespace Wixard {
             case 137:
             this.btnsetlocalwix = ((System.Windows.Controls.Button)(target));
             
-            #line 1254 "..\..\MainWindow.xaml"
+            #line 1249 "..\..\MainWindow.xaml"
             this.btnsetlocalwix.Click += new System.Windows.RoutedEventHandler(this.btnsetlocalwix_Click);
             
             #line default
@@ -2085,7 +2085,7 @@ namespace Wixard {
             case 139:
             this.textEditor = ((ICSharpCode.AvalonEdit.TextEditor)(target));
             
-            #line 1288 "..\..\MainWindow.xaml"
+            #line 1283 "..\..\MainWindow.xaml"
             this.textEditor.MouseRightButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.textEditor_MouseRightButtonDown);
             
             #line default
@@ -2094,7 +2094,7 @@ namespace Wixard {
             case 140:
             this.btnEditorCopy = ((System.Windows.Controls.Button)(target));
             
-            #line 1301 "..\..\MainWindow.xaml"
+            #line 1296 "..\..\MainWindow.xaml"
             this.btnEditorCopy.Click += new System.Windows.RoutedEventHandler(this.btnEditorCopy_Click);
             
             #line default
@@ -2103,7 +2103,7 @@ namespace Wixard {
             case 141:
             this.btnEditorPaste = ((System.Windows.Controls.Button)(target));
             
-            #line 1306 "..\..\MainWindow.xaml"
+            #line 1301 "..\..\MainWindow.xaml"
             this.btnEditorPaste.Click += new System.Windows.RoutedEventHandler(this.btnEditorPaste_Click);
             
             #line default
@@ -2112,7 +2112,7 @@ namespace Wixard {
             case 142:
             this.btnEditorCut = ((System.Windows.Controls.Button)(target));
             
-            #line 1311 "..\..\MainWindow.xaml"
+            #line 1306 "..\..\MainWindow.xaml"
             this.btnEditorCut.Click += new System.Windows.RoutedEventHandler(this.btnEditorCut_Click);
             
             #line default
@@ -2121,7 +2121,7 @@ namespace Wixard {
             case 143:
             this.btnEditorSelectAll = ((System.Windows.Controls.Button)(target));
             
-            #line 1316 "..\..\MainWindow.xaml"
+            #line 1311 "..\..\MainWindow.xaml"
             this.btnEditorSelectAll.Click += new System.Windows.RoutedEventHandler(this.btnEditorSelectAll_Click);
             
             #line default
@@ -2136,7 +2136,7 @@ namespace Wixard {
             case 146:
             this.btnGithub = ((System.Windows.Controls.Button)(target));
             
-            #line 1357 "..\..\MainWindow.xaml"
+            #line 1352 "..\..\MainWindow.xaml"
             this.btnGithub.Click += new System.Windows.RoutedEventHandler(this.btnGithub_Click);
             
             #line default
@@ -2145,7 +2145,7 @@ namespace Wixard {
             case 147:
             this.btnDonate = ((System.Windows.Controls.Button)(target));
             
-            #line 1360 "..\..\MainWindow.xaml"
+            #line 1355 "..\..\MainWindow.xaml"
             this.btnDonate.Click += new System.Windows.RoutedEventHandler(this.btnDonate_Click);
             
             #line default
