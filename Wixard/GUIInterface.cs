@@ -216,6 +216,7 @@ namespace Wixard
             NotifyPropertyChanged("AppVersion");
             NotifyPropertyChanged("HelpLink");
             NotifyPropertyChanged("Icon");
+            NotifyPropertyChanged("IconLocation");
         }
         #endregion
         #region SetupOptions

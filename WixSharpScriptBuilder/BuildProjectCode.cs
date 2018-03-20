@@ -132,7 +132,7 @@ namespace WixSharpScriptBuilder
             temp += Utilities.AddIfNotEmpty("\tproject.ControlPanelInfo.Readme = @\"//INSERTTEXTHERE//\";", Sourcefiles.GetReadMePath());
             temp += Utilities.AddIfNotEmpty("\tproject.ControlPanelInfo.HelpLink = @\"//INSERTTEXTHERE//\";", application.GetLink());
             temp += Utilities.AddIfNotEmpty("\tproject.ControlPanelInfo.Manufacturer = \"//INSERTTEXTHERE//\";", application.GetPublisher());
-            temp += Utilities.AddIfNotEmpty("\tproject.ControlPanelInfo.ProductIcon = \"//INSERTTEXTHERE//\";", application.GetIcon());
+            temp += Utilities.AddIfNotEmpty("\tproject.ControlPanelInfo.ProductIcon = @\"//INSERTTEXTHERE//\";", application.GetIcon());
             temp += "\tproject.OutFileName = OutputFile; ";
             temp += $"\tproject.ControlPanelInfo.InstallLocation = \"[INSTALLDIR]\";{Environment.NewLine}";
             if (Options.GetIncludeUninstall())

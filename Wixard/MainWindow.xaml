@@ -165,6 +165,9 @@
                     <Viewbox Grid.Column="1" Grid.Row="0">
                         <Button x:Name="btnchangeicon" Content="Find" Click="Btnchangeicon_Click"/>
                     </Viewbox>
+                    <Viewbox Grid.Column="1" Grid.Row="1">
+                        <Button x:Name="btnRemoveicon" Content="Remove" Click="btnRemoveicon_Click" />
+                    </Viewbox>
                 </Grid>
             </Grid>
             <Grid x:Name="SetupOptionsPanel" Grid.Column="1" Visibility="Hidden">
@@ -1316,7 +1319,7 @@
                 </StackPanel>
                 <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Grid.Row="2" Text="{Binding Compileresult}" />
             </Grid>
-            <Grid Name="AboutGrid" Grid.Column="1" Visibility="Visible">
+            <Grid Name="AboutGrid" Grid.Column="1" Visibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50*"/>
                     <ColumnDefinition Width="50*"/>

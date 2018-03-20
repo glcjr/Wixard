@@ -971,6 +971,9 @@ namespace Wixard
             textEditor.SelectAll();
         }
 
-      
+        private void btnRemoveicon_Click(object sender, RoutedEventArgs e)
+        {
+            win.Icon = "";
+        }
     }
 }
