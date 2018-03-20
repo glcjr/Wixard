@@ -72,6 +72,14 @@ namespace WixSharpScriptBuilder
             installdir = dir;
             progfiles = files;
             progmenu = menu;
+            addglobalfileassociations();
+        }
+        private void addglobalfileassociations()
+        {
+            foreach (var s in Sourcefiles.GetSourceFiles())
+                if (s.GetIsMainExecutable())
+                    foreach (var assoc in GlobalFileAssociations.getfileassociations())
+                        s.AddFileAssociation(assoc);
         }
         public BuildProjectCode(WIXSharpProject project)
         {
@@ -91,7 +99,7 @@ namespace WixSharpScriptBuilder
         }
         private string GetProjectStructure()
         {
-            string line = GlobalFileAssociations.GetLine();
+            string line = "";
             line += $", {Environment.NewLine}\tnew Dir(@\"{installdir}\",{Environment.NewLine}{Sourcefiles.GetMainExecutableLicenseReadMeLine(application.GetProductName(), progmenu)}";
             line += FireExcept.GetLine();
             if (Options.GetIncludeUninstall())
@@ -100,9 +108,7 @@ namespace WixSharpScriptBuilder
             foreach (var file in Sourcefiles.GetSourceFiles(directory))
                 line += $", {Environment.NewLine} {file.GetFileLine()}";
             line += Sourcefiles.GetSubdirectoryfiles();
-            line += Certs.GetCertificatesLine();
-            line += EnvironmentVariables.GetLine();
-            line += Registryvalues.GetLine();
+            
             line += ")";
             foreach (var newdirectory in Sourcefiles.GetDirectories(true))
             {
@@ -110,7 +116,10 @@ namespace WixSharpScriptBuilder
                 foreach (var file in Sourcefiles.GetSourceFiles(newdirectory))
                     line += $",{Environment.NewLine}\t {file.GetFileLine()}";
                 line += ")";
-            }
+            }        
+            line += Certs.GetCertificatesLine();
+            line += EnvironmentVariables.GetLine();
+            line += Registryvalues.GetLine();
             if (Options.GetOptionalDesktopShortcut())
                 line += Options.GetShortcutDesktopLines();
             if (Options.GetPromptReboot())
