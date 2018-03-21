@@ -661,6 +661,41 @@ namespace Wixard
                 NotifyPropertyChanged();
             }
         }
+        public string EvarAction
+        {
+            get
+            {
+                return Evar.GetAction().Replace("EnvVarAction.","");
+            }
+            set
+            {
+                Evar.SetAction($"EnvVarAction.{value}");
+                NotifyPropertyChanged();
+            }
+        }
+        public bool EvarSystem
+        {
+            get
+            {
+                return Evar.GetSystem();
+            }
+            set
+            {
+                Evar.SetSystem(value);
+            }
+        }
+        public bool EvarPermanent
+        {
+            get
+            {
+                return Evar.GetPermanent();
+            }
+            set
+            {
+                Evar.SetPermanent(value);
+            }
+        }
+
         public ObservableCollection<EnvironmentVar> Evarslist
         {
             get

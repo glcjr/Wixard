@@ -280,9 +280,9 @@ namespace WIXSharpHelper
         {
             Advancedoptions.AddFirewallException(exception);
         }
-        public void AddEnvironmentVariable(string varnm, string dir = "[INSTALLDIR]", string placement = "", string condition = "")
+        public void AddEnvironmentVariable(string varnm, string dir = "[INSTALLDIR]", string placement = "", string condition = "", bool system = false, bool permanent = false, string action = "")
         {
-            Advancedoptions.AddEnvironmentVariable(varnm, dir, placement, condition);
+            Advancedoptions.AddEnvironmentVariable(varnm, dir, placement, condition, system, permanent, action);
         }
         public void AddEnvironmentVariable(EnvironmentVar var)
         {

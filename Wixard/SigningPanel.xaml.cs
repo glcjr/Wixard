@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,16 @@ namespace Wixard
         {
             InitializeComponent();
             win = (GUIInterface)DataContext;
+        }
+
+        private void btnCertPath_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Certificate Files(*.pfx)|*.pfx|Certificate Files(*.crt)|*.crt|Certificate Files(*.cer)|*.cer|Certificate Files(*.p12)|*.p12";
+            if (of.ShowDialog() == true)
+            {
+                win.CertificatePath = of.FileName;
+            }
         }
     }
 }

@@ -52,3 +52,7 @@ C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\RegistryPanel.baml
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\SourceFilesPanel.baml
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\UsersPanel.baml
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\AboutPanel.g.cs
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\EditorPanel.g.cs
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\AboutPanel.baml
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\EditorPanel.baml

@@ -10,8 +10,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="12*" />
-            <RowDefinition Height="60*" />
             <RowDefinition Height="40*" />
+            <RowDefinition Height="60*" />
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0">
@@ -34,10 +34,10 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Viewbox Grid.Row="1">
+                <Viewbox Grid.Row="1" Grid.RowSpan="2">
                     <Button x:Name="btnAddEvar" Content="Add" MinWidth="60" Click="btnAddEvar_Click" />
                 </Viewbox>
-                <Viewbox Grid.Row="2">
+                <Viewbox Grid.Row="3" Grid.RowSpan="2">
                     <Button x:Name="btnRmvEvar" Content="Remove" MinWidth="60" Click="btnRmvEvar_Click" />
                 </Viewbox>
             </Grid>
@@ -54,6 +54,9 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Viewbox Grid.Column="0" Grid.Row="0">
                 <Label Content="Name:" />
@@ -64,8 +67,17 @@
             <Viewbox Grid.Column="0" Grid.Row="2">
                 <Label Content="Placement:" />
             </Viewbox>
-            <Viewbox Grid.Column="0" Grid.Row="3">
+            <Viewbox Grid.Column="0" Grid.Row="6">
                 <Label Content="Condition:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="3">
+                <Label Content="Action:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="4">
+                <Label Content="Permanent:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="5">
+                <Label Content="System:" />
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="0">
                 <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding EVarName}" />
@@ -82,11 +94,23 @@
                     <sys:String>last</sys:String>
                 </ComboBox>
             </Viewbox>
-
-            <Viewbox Grid.Column="1" Grid.Row="3">
+            <Viewbox Grid.Column="1" Grid.Row="6">
                 <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding EVarCondition}" />
             </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="3">
+                <ComboBox MinWidth="160" HorizontalAlignment="Left" SelectedValue="{Binding EVarAction}">
+                    <sys:String>create</sys:String>
+                    <sys:String>set</sys:String>
+                    <sys:String>remove</sys:String>
+                </ComboBox>
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="4">
+                <CheckBox IsChecked="{Binding EvarPermanent}" />
+            </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="5">
+                <CheckBox IsChecked="{Binding EvarSystem}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="8">
                 <Button x:Name="btnupdateaddevar" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddevar_Click" />
             </Viewbox>
         </Grid>

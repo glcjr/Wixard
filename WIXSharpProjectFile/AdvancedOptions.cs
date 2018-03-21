@@ -160,9 +160,9 @@ namespace WIXSharpHelper
         {
             FirewallExcept.Add(exception);
         }
-        public void AddEnvironmentVariable(string varnm, string dir = "[INSTALLDIR]", string placement = "", string condition = "")
+        public void AddEnvironmentVariable(string varnm, string dir = "[INSTALLDIR]", string placement = "", string condition = "", bool system = false, bool permanent = false, string action = "")
         {
-            EnvironmentVariables.Add(new EnvironmentVar(varnm, dir, placement, condition));
+            EnvironmentVariables.Add(new EnvironmentVar(varnm, dir, placement, condition, system, permanent, action));
         }
         public void AddEnvironmentVariable(EnvironmentVar var)
         {

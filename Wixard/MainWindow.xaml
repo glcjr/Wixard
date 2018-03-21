@@ -118,11 +118,6 @@
             <local:CompilerOptionsPanel x:Name="CompilerOptionControl" Grid.Column="1" Visibility="Hidden" />
             <local:AboutPanel x:Name="AboutControl" Grid.Column="1" Visibility="Hidden" />
             <local:EditorPanel x:Name="EditorControl" Grid.Column="1" Visibility="Hidden"/>
-
-
-
-
-
         </Grid>
     </Grid>
 </Window>

@@ -42,9 +42,18 @@
             <Viewbox Grid.Column="0" Grid.Row="2">
                 <CheckBox Content="Sign Installer" IsChecked="{Binding SignInstaller}" />
             </Viewbox>
-            <Viewbox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Stretch="Uniform" >
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="0" HorizontalAlignment="Left" Stretch="Uniform" >
                 <TextBox x:Name="txtCertPath" MinWidth="160" Text="{Binding CertificatePath}" />
             </Viewbox>
+            <Viewbox Grid.Column="1">
+                <Button x:Name="btnCertPath" Content="Find" Click="btnCertPath_Click" />
+            </Viewbox>
+        </Grid>
             <Viewbox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Stretch="Uniform" >
                 <TextBox x:Name="txtPasswprd" MinWidth="160" Text="{Binding CertificatePassword}"/>
             </Viewbox>

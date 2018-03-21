@@ -47,15 +47,21 @@ namespace WIXSharpHelper
         private string Directory= "[INSTALLDIR]";
         private string Placement = "EnvVarPart.last";
         private string Condition = "";
+        private bool System = false;
+        private bool Permanent = false;
+        private string Action = "EnvVarAction.set";
 
         public EnvironmentVar()
         {  }
-        public EnvironmentVar(string varnm, string dir = "[INSTALLDIR]", string placement = "EnvVarPart.last", string condition = "")
+        public EnvironmentVar(string varnm, string dir = "[INSTALLDIR]", string placement = "EnvVarPart.last", string condition = "",bool system = false, bool permanent = false, string action = "")
         {
             Name = varnm;
             Directory = dir;
             Placement = placement;
             Condition = condition;
+            System = system;
+            Permanent = permanent;
+            Action = action;
         }
         public EnvironmentVar(SerializationInfo info, StreamingContext context)
         {
@@ -63,6 +69,14 @@ namespace WIXSharpHelper
             Directory = (string)info.GetValue("dir", typeof(string));
             Placement = (string)info.GetValue("placement", typeof(string));
             Condition = (string)info.GetValue("condition", typeof(string));
+            try // added 3-20-18 to be removed eventually
+            {
+                System = (bool)info.GetValue("system", typeof(bool));
+                Permanent = (bool)info.GetValue("permanent", typeof(bool));
+                Action = (string)info.GetValue("action", typeof(string));
+            }
+            catch
+            { }
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
@@ -70,6 +84,9 @@ namespace WIXSharpHelper
             info.AddValue("dir", Directory, typeof(string));
             info.AddValue("placement", Placement, typeof(string));
             info.AddValue("condition", Condition, typeof(string));
+            info.AddValue("system", System, typeof(bool));
+            info.AddValue("permanent", Permanent, typeof(bool));
+            info.AddValue("action", Action, typeof(string));
         }
         public void SetName(string nm)
         {
@@ -87,6 +104,18 @@ namespace WIXSharpHelper
         {
             Condition = condition;
         }
+        public void SetAction(string action)
+        {
+            Action = action;
+        }
+        public void SetSystem(bool system)
+        {
+            System = system;
+        }
+        public void SetPermanent(bool permanent)
+        {
+            Permanent = permanent;
+        }
         public string GetName()
         {
             return Name;
@@ -103,6 +132,18 @@ namespace WIXSharpHelper
         {
             return Condition;
         }
+        public string GetAction()
+        {
+            return Action;
+        }
+        public bool GetSystem()
+        {
+            return System;
+        }
+        public bool GetPermanent()
+        {
+            return Permanent;
+        }
         public string GetLine()
         {
             string line = $", {Environment.NewLine}new EnvironmentVariable(\"{Name}\", \"{Directory}\")";
@@ -112,13 +153,29 @@ namespace WIXSharpHelper
                 if (Placement != string.Empty)
                 {
                     line += $"Part = {Placement}";
-                    if (Condition != string.Empty)
+                    if ((Condition != string.Empty)||(System)||(Permanent)||(Action != string.Empty))
                         line += ",";
                 }
                 if (Condition != string.Empty)
                 {
                     line += $"Condition = {Condition}";
+                    if ((System) || (Permanent) || (Action != string.Empty))
+                        line += ",";
                 }
+                if (System)
+                {
+                    line += $"System = {System}";
+                    if ((Permanent) || (Action != string.Empty))
+                        line += ",";
+                }
+                if (Permanent)
+                {
+                    line += $"Placement = {Permanent}";
+                    if ((Action != string.Empty))
+                        line += ",";                
+                }
+                if (Action != string.Empty)
+                    line += $"Action = {Action}";
                 line += $"}}";
             }
             return line;
