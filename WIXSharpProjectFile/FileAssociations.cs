@@ -79,7 +79,8 @@ namespace WIXSharpHelper
 
         public void Add(FileAssociation fileassociation)
         {
-            fileassociations.Add(fileassociation);
+            if (!(fileassociations.Contains(fileassociation)))
+                fileassociations.Add(fileassociation);
         }
         public string GetLine()
         {

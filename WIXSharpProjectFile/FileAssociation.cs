@@ -62,7 +62,15 @@ namespace WIXSharpHelper
         }
         public string GetLine()
         {
-            return $",{Environment.NewLine} new FileAssociation(\"{Extension}\",\"{ContentType}\",\"{Command}\", \"{CommandArguments}\")";
+            string temp = $",{Environment.NewLine} new FileAssociation(\"{Extension}\"";
+            if (!(CommandArguments.Equals(@"\""%1\""")))
+                temp += $",\"{ContentType}\",\"{Command}\", \"{CommandArguments}\"";
+            else if (!(Command.Equals("Open")))
+            {
+                temp += $",\"{ContentType}\",\"{Command}\"";
+            }
+            temp += ")";
+            return temp;
         }
         public FileAssociation(SerializationInfo info, StreamingContext ctxt)
         {

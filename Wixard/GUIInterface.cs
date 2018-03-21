@@ -1906,16 +1906,18 @@ namespace Wixard
         public string Filename { get; set; } = "";
         public void Load(string file)
         {
-            IFormatter formatter = new BinaryFormatter();
-            using (Stream stream = File.Open(file, FileMode.Open))
-            using (DeflateStream deflateStream = new DeflateStream(stream,
-                                                      CompressionMode.Decompress))
-            {
-                project = (WIXSharpProject) formatter.Deserialize(deflateStream);
-            }
-            Filename = file;
-            Saved = true;           
-            NotifyALL();
+            
+                IFormatter formatter = new BinaryFormatter();
+                using (Stream stream = File.Open(file, FileMode.Open))
+                using (DeflateStream deflateStream = new DeflateStream(stream,
+                                                          CompressionMode.Decompress))
+                {
+                    project = (WIXSharpProject)formatter.Deserialize(deflateStream);
+                }
+                Filename = file;
+                Saved = true;
+                NotifyALL();
+            
         }
         public void Save(string file)
         {

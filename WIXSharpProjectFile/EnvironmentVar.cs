@@ -147,7 +147,7 @@ namespace WIXSharpHelper
         public string GetLine()
         {
             string line = $", {Environment.NewLine}new EnvironmentVariable(\"{Name}\", \"{Directory}\")";
-            if ((Placement != string.Empty) || (Condition != string.Empty))
+            if ((Placement != string.Empty) || (Condition != string.Empty) || (System) || (Permanent) || (Action != string.Empty))
             {
                 line += $"{{";
                 if (Placement != string.Empty)

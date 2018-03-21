@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Wixard"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Wixard" Height="600" Width="843" FontSize="14" Loaded="Window_Loaded">
+        Title="Wixard" Height="600" Width="843" FontSize="14" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="8*" />

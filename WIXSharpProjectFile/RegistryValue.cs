@@ -150,7 +150,6 @@ namespace WIXSharpHelper
             else
                 line += $"{Value}";
             line+= $")"; 
-
             return line;
         }
         public override string ToString()

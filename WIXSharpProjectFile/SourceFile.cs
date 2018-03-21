@@ -159,6 +159,7 @@ namespace WIXSharpHelper
         }
         public void AddFileAssociation(FileAssociation association)
         {
+           
             fileassociations.Add(association);
         }
         public string GetFileLine(string shortcuttitle="", string progmenu="")

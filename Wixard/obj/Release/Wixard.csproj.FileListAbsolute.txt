@@ -56,3 +56,4 @@ C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\EditorPanel.g.cs
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\AboutPanel.baml
 C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\EditorPanel.baml
+C:\Users\Downstairs Computer\source\repos\WIXSharpProjectFile\Wixard\obj\Release\Wixard.csprojResolveAssemblyReference.cache

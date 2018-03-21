@@ -66,8 +66,15 @@ namespace Wixard
             InitializeComponent();
             this.DataContext = win;            
             win.Addnetids();
-            win.CheckEnvironment();            
+            win.CheckEnvironment();
+            
             UserControlCheck(AppInfoControl);
+            win.changed = false;
+            string filename = checkcommandline();
+            
+            if (filename != string.Empty)            
+                Load(filename);
+            
         }                
         private void Close(UserControl control)
         {
@@ -301,9 +308,23 @@ namespace Wixard
             of.Filter = "Wixard Files(*.wxg)| *.wxg|All Files(*.*)|*.*";
             of.InitialDirectory = SetInitDirectory();
             if (of.ShowDialog() == true)
-                win.Load(of.FileName);
-            if (win.MinimumNet != string.Empty)
-                win.NeedNet = true;
+            {
+                Load(of.FileName);
+            }
+        }
+        private void Load(string filename)
+        {
+            try
+            {
+                win.Load(filename);
+                if (win.MinimumNet != string.Empty)
+                    win.NeedNet = true;
+                win.changed = false;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         private string SetInitDirectory()
         {
@@ -314,20 +335,77 @@ namespace Wixard
         }
         private void btnFileSaveAs_Click(object sender, RoutedEventArgs e)
         {
+            SaveAs();          
+         
+        }
+        private void SaveAs()
+        {
             SetInitDirectory();
             SaveFileDialog sf = new SaveFileDialog();
             sf.Filter = "Wixard Files(*.wxg)| *.wxg|All Files(*.*)|*.*";
             sf.InitialDirectory = SetInitDirectory();
             if (sf.ShowDialog() == true)
-                win.Save(sf.FileName);                
-         
+            {
+                win.Save(sf.FileName);
+                win.changed = false;
+            }
         }
         private void btnFileSave_Click(object sender, RoutedEventArgs e)
         {
+            save();
+        }
+        private void save()
+        {
             if (win.Filename == string.Empty)
-                btnFileSaveAs_Click(sender, e);
+                SaveAs();
             else
+            {
                 win.Save(win.Filename);
+                win.changed = false;
+            }
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                if (win.changed)
+                {
+                    e.Cancel = true;
+                    win.changed = false;
+                    if (MessageBox.Show("Save Your Changes?", "Changes to file", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    {
+                        save();
+                    }
+                    else
+                        System.Windows.Application.Current.Shutdown();
+                }
+            }
+            catch
+            { }
+        }
+        private string checkcommandline()
+        {
+            var args = Environment.GetCommandLineArgs();
+            if (args.Length > 1)
+            {
+                string fileName = "";
+                int index = 1;
+                while ((index < args.Length) && (!(fileName.Contains(".wxg"))))
+                {
+                    fileName += $"{args[index]} ";
+                    index++;
+                }
+                fileName = fileName.Trim();
+                if (File.Exists(fileName))
+                {
+                    var extension = System.IO.Path.GetExtension(fileName);
+                    if (extension == ".wxg")
+                    {
+                        return fileName;
+                    }
+                }
+            }
+            return string.Empty;
         }
     }
 }
