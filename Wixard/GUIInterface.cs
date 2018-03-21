@@ -306,7 +306,18 @@ namespace Wixard
                 NotifyPropertyChanged();
             }
         }
-        public bool NeedNet { get; set; } = false;
+        private bool neednet = false;
+        public bool NeedNet {
+            get
+            {
+                return neednet;
+            }
+            set
+            {
+                neednet = value;
+                NotifyPropertyChanged();
+            }
+        } 
         public void NotifySetupOptions()
         {
             NotifyPropertyChanged("IncludeUninstall");
