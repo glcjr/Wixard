@@ -9,7 +9,8 @@
     <Grid>
         
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="40*"/>
                 <ColumnDefinition Width="60*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -24,25 +25,25 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Viewbox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+            <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0">
                 <Label Content="Setup Options" HorizontalAlignment="Center" />
             </Viewbox>
-            <Viewbox Grid.Row="1" HorizontalAlignment="Left" Stretch="Uniform">
-                <CheckBox x:Name="cbincludeuninstall" Content="Include Uninstall" IsChecked="{Binding IncludeUninstall}"/>
+            <Viewbox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Stretch="Uniform">
+            <CheckBox x:Name="cbincludeuninstall" Content="Include Uninstall" IsChecked="{Binding IncludeUninstall}" MinWidth="{Binding ElementName=cbnetframework, Path=ActualWidth}"/>
             </Viewbox>
-            <Viewbox Grid.Row="2" HorizontalAlignment="Left" Stretch="Uniform">
-                <CheckBox x:Name="cboptionalshortcut" Content="Optional Shortcut" IsChecked="{Binding OptionDesktopShortcut}"/>
+            <Viewbox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Stretch="Uniform">
+            <CheckBox x:Name="cboptionalshortcut" Content="Optional Shortcut" IsChecked="{Binding OptionDesktopShortcut}" MinWidth="{Binding ElementName=cbnetframework, Path=ActualWidth}"/>
             </Viewbox>
-            <Viewbox Grid.Row="3" HorizontalAlignment="Left" Stretch="Uniform">
-                <CheckBox x:Name="cb64bit" Content="Target 64bit Setup" IsChecked="{Binding SixtyfourBitSetup}" />
+            <Viewbox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Stretch="Uniform">
+            <CheckBox x:Name="cb64bit" Content="Target 64bit Setup" IsChecked="{Binding SixtyfourBitSetup}" MinWidth="{Binding ElementName=cbnetframework, Path=ActualWidth}" />
             </Viewbox>
-            <Viewbox Grid.Row="4" HorizontalAlignment="Left" Stretch="Uniform">
-                <CheckBox x:Name="cbpromptforreboot" Content="Prompt for reboot" IsChecked="{Binding PromptReboot}"/>
+            <Viewbox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Stretch="Uniform">
+            <CheckBox x:Name="cbpromptforreboot" Content="Prompt for reboot" IsChecked="{Binding PromptReboot}" MinWidth="{Binding ElementName=cbnetframework, Path=ActualWidth}"/>
             </Viewbox>
-            <Viewbox Grid.Row="5" HorizontalAlignment="Left" Stretch="Uniform">
+            <Viewbox Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Stretch="Uniform">
                 <CheckBox x:Name="cbnetframework" Content="Need Net Framework" IsChecked="{Binding NeedNet}" Checked="cbnetframework_Checked" Click="cbnetframework_Checked"/>
             </Viewbox>
-            <Grid x:Name="NetFrameworkPanel" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="2" Visibility="Hidden">
+            <Grid x:Name="NetFrameworkPanel" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="2" Visibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="40*"/>
                     <ColumnDefinition Width="60*"/>
@@ -51,7 +52,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Viewbox Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Stretch="Uniform">
+            <Viewbox Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Stretch="Uniform" >
                     <Label Content="Minimum Net Required" />
                 </Viewbox>
                 <Viewbox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Stretch="Uniform">
