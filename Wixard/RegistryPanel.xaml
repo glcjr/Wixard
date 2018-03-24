@@ -9,8 +9,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="12*" />
-            <RowDefinition Height="60*" />
             <RowDefinition Height="40*" />
+            <RowDefinition Height="60*" />
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
         <Viewbox Grid.Row="0">
@@ -53,6 +53,10 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Viewbox Grid.Column="0" Grid.Row="0">
                 <Label Content="Name:" />
@@ -65,6 +69,18 @@
             </Viewbox>
             <Viewbox Grid.Column="0" Grid.Row="3">
                 <Label Content="Root:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="4">
+                <Label Content="Win64:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="5">
+                <Label Content="Never Overwrite:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="6">
+                <Label Content="Force Create on Install:" />
+            </Viewbox>
+            <Viewbox Grid.Column="0" Grid.Row="7">
+                <Label Content="Force Delete on Uninstall:" />
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="0">
                 <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding RegistryName}" />
@@ -81,7 +97,19 @@
             <Viewbox Grid.Column="1" Grid.Row="2">
                 <TextBox MinWidth="160" HorizontalAlignment="Left" Text="{Binding RegValue}" />
             </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="4">
+                <CheckBox IsChecked="{Binding RegWin64}" />
+            </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="5">
+                <CheckBox IsChecked="{Binding RegNeverOverwrite}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="6">
+                <CheckBox IsChecked="{Binding RegForceCreate}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="7">
+                <CheckBox IsChecked="{Binding RegForceDelete}" />
+            </Viewbox>
+            <Viewbox Grid.Column="1" Grid.Row="9">
                 <Button x:Name="btnupdateaddRegVar" Content="Add" MinWidth="100" RenderTransformOrigin="0.717,0.717" Click="btnupdateaddRegVar_Click" />
             </Viewbox>
         </Grid>

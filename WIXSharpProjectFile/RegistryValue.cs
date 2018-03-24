@@ -49,15 +49,23 @@ namespace WIXSharpHelper
         private string Name = "";
         private object Value = "";
         private string FeatureName = "";
+        private bool Win64 = false;
+        private bool NeverOverwrite = false;
+        private bool ForceCreateOnInstall = false;
+        private bool ForceDeleteOnUninstall = false;
 
         public RegistryValue()
         { }
-        public RegistryValue(RegistryHive root, string key, string nm, object value)
+        public RegistryValue(RegistryHive root, string key, string nm, object value, bool win64=false, bool neveroverwrite=false, bool forcecreate = false, bool forcedelete = false)
         {
             Root = root;
             Key = key;
             Name = nm;
             Value = value;
+            Win64 = win64;
+            NeverOverwrite = neveroverwrite;
+            ForceCreateOnInstall = forcecreate;
+            ForceDeleteOnUninstall = forcedelete;
         }
         public RegistryValue(SerializationInfo info, StreamingContext ctxt)
         {
@@ -66,6 +74,15 @@ namespace WIXSharpHelper
             Name = (string)info.GetValue("Name", typeof(string));
             Value = (object)info.GetValue("Value", typeof(object));
             FeatureName = (string)info.GetValue("FeatureName", typeof(string));
+            try
+            {
+                Win64 = (bool) info.GetValue("win64", typeof(bool));
+                NeverOverwrite = (bool) info.GetValue("neveroverwrite",typeof(bool));
+                ForceCreateOnInstall = (bool) info.GetValue("forcecreate", typeof(bool));
+                ForceDeleteOnUninstall = (bool) info.GetValue("forcedelete",typeof(bool));
+            }
+            catch
+            {}
         }
 
         public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
@@ -75,8 +92,43 @@ namespace WIXSharpHelper
             info.AddValue("Name", this.Name, typeof(string));
             info.AddValue("Value", this.Value, typeof(object));
             info.AddValue("FeatureName", this.FeatureName, typeof(string));
+            info.AddValue("win64",this.Win64, typeof(bool));
+            info.AddValue("neveroverwrite",this.NeverOverwrite, typeof(bool));
+            info.AddValue("forcecreate",this.ForceCreateOnInstall, typeof(bool));
+            info.AddValue("forcedelete",this.ForceDeleteOnUninstall, typeof(bool));
         }
-
+        public void SetWin64(bool value)
+        {
+            Win64 = value;
+        }
+        public void SetNeverOverwrite(bool value)
+        {
+            NeverOverwrite = value;
+        }
+        public void SetForceCreateOnInstall(bool value)
+        {
+            ForceCreateOnInstall = value;
+        }
+        public void SetForceDeleteOnUninstall(bool value)
+        {
+            ForceDeleteOnUninstall = value;
+        }
+        public bool GetWin64()
+        {
+            return Win64;
+        }
+        public bool GetNeverOverwrite()
+        {
+            return NeverOverwrite;
+        }
+        public bool GetForceCreateOnInstall()
+        {
+            return ForceCreateOnInstall;
+        }
+        public bool GetForceDeleteOnUninstall()
+        {
+            return ForceDeleteOnUninstall;
+        }
         public void SetRoot(RegistryHive root)
         {
             Root = root;
@@ -150,6 +202,31 @@ namespace WIXSharpHelper
             else
                 line += $"{Value}";
             line+= $")"; 
+            if ((Win64)||(NeverOverwrite)||(ForceCreateOnInstall)||(ForceDeleteOnUninstall))
+            {
+                line += $"{{";
+                if (Win64)
+                {
+                    line += $"Win64 = {Win64.ToString().ToLower()}";
+                    if ((NeverOverwrite) || (ForceCreateOnInstall) || (ForceDeleteOnUninstall))
+                        line += ",";
+                }
+                if (NeverOverwrite)
+                {
+                    line += $"NeverOverwrite = {NeverOverwrite.ToString().ToLower()}";
+                    if ((ForceCreateOnInstall) || (ForceDeleteOnUninstall))
+                        line += ",";
+                }
+                if (ForceCreateOnInstall)
+                {
+                    line += $"ForceCreateOnInstall = {ForceCreateOnInstall.ToString().ToLower()}";
+                    if (ForceDeleteOnUninstall)
+                        line += ",";
+                }
+                if (ForceDeleteOnUninstall)
+                    line += $"ForceDeleteOnUninstall = {ForceDeleteOnUninstall.ToString().ToLower()}";
+                line += $"}}";
+            }
             return line;
         }
         public override string ToString()

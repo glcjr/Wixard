@@ -1321,7 +1321,54 @@ namespace Wixard
                 NotifyPropertyChanged();
             }
         }
- 
+        public bool RegWin64
+        {
+            get
+            {
+                return regval.GetWin64();
+            }
+            set
+            {
+                regval.SetWin64(value);
+                NotifyPropertyChanged();
+            }
+        }
+        public bool RegNeverOverwrite
+        {
+            get
+            {
+                return regval.GetNeverOverwrite();
+            }
+            set
+            {
+                regval.SetNeverOverwrite(value);
+                NotifyPropertyChanged();
+            }
+        }
+        public bool RegForceCreate
+        {
+            get
+            {
+                return regval.GetForceCreateOnInstall();
+            }
+            set
+            {
+                regval.SetForceCreateOnInstall(value);
+                NotifyPropertyChanged();
+            }
+        }
+        public bool RegForceDelete
+        {
+            get
+            {
+                return regval.GetForceDeleteOnUninstall();
+            }
+            set
+            {
+                regval.SetForceDeleteOnUninstall(value);
+                NotifyPropertyChanged();
+            }
+        }
         public void NotifyRegistryValue()
         {
             NotifyPropertyChanged("RegistryRoot");
@@ -1329,7 +1376,11 @@ namespace Wixard
             NotifyPropertyChanged("RegistryKey");
             NotifyPropertyChanged("RegValue");
             NotifyPropertyChanged("RegistryValuelist");
-           
+            NotifyPropertyChanged("RegWin64");
+            NotifyPropertyChanged("RegNeverOverwrite");
+            NotifyPropertyChanged("RegForceCreate");
+            NotifyPropertyChanged("RegForceDelete");
+
         }
         public void AddRegistryValue()
         {
