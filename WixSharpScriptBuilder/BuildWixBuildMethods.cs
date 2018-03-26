@@ -71,6 +71,13 @@ namespace WixSharpScriptBuilder
             temp += $"return project.BuildWxs();{Environment.NewLine}}}{Environment.NewLine}";
             return temp;
         }
+        public string GetBuildMsmMethod()
+        {
+            string temp = $"{Environment.NewLine} static public string buildmsm() {Environment.NewLine} {{ {Environment.NewLine}\t";
+            temp += GetInsideBuildMethod();
+            temp += $"return project.BuildMsm();{Environment.NewLine}}}{Environment.NewLine}";
+            return temp;
+        }
 
     }
 }

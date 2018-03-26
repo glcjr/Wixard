@@ -61,7 +61,10 @@ namespace WIXSharpHelper
         {
             this.fileassociations = (List<FileAssociation>)info.GetValue("fileassociations", typeof(List<FileAssociation>));
         }
-
+        public void Clear()
+        {
+            fileassociations.Clear();
+        }
         public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
         {
             info.AddValue("fileassociations", this.fileassociations);

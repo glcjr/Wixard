@@ -199,7 +199,7 @@ namespace Wixard
         {
             win.Compileresult = "";
             win.DownloadWixSharp();
-            if (win.CreateMSI)
+            if ((win.CreateMSI)||(win.CreateMSM))
                 win.DownloadWix();
             if(UserControlCheck(EditorControl))
             {

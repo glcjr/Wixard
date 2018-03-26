@@ -1676,6 +1676,7 @@ namespace Wixard
         public string WixSharpLocation { get; set; } = "Use Local Location";
         private bool createmsi = true;
         private bool createwxs = false;
+        private bool createmsm = false;
         public bool CreateMSI { get
             {
                 return createmsi;
@@ -1694,6 +1695,18 @@ namespace Wixard
             set
             {
                 createwxs = value;
+                NotifyPropertyChanged();
+            }
+        }
+        public bool CreateMSM
+        {
+            get
+            {
+                return createmsm;
+            }
+            set
+            {
+                createmsm = value;
                 NotifyPropertyChanged();
             }
         }
@@ -1717,8 +1730,10 @@ namespace Wixard
             WixSharpScript script = new WixSharpScript(project);
             if (createmsi)
                 csgenscript = script.GetMSIScript();
-            else
+            else if (createwxs)
                 csgenscript = script.GetWxsScript();
+            else
+                csgenscript = script.GetMsmScript();
             changed = false;
         }
         public Stream GetCsScriptStream()

@@ -78,8 +78,11 @@ namespace WixSharpScriptBuilder
         {
             foreach (var s in Sourcefiles.GetSourceFiles())
                 if (s.GetIsMainExecutable())
+                {
+                    s.ClearFileAssociation();
                     foreach (var assoc in GlobalFileAssociations.getfileassociations())
                         s.AddFileAssociation(assoc);
+                }
         }
         public BuildProjectCode(WIXSharpProject project)
         {

@@ -105,6 +105,10 @@ namespace WIXSharpHelper
         {
             return IsMainExecutable;
         }
+        public void ClearFileAssociation()
+        {
+            fileassociations.Clear();
+        }
         public bool GetIsLicenseFile()
         {
             return IsLicenseFile;

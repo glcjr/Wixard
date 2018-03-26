@@ -95,5 +95,13 @@ namespace WixSharpScriptBuilder
             temp += GetEnding();
             return temp;
         }
+        public string GetMsmScript(string returntype = "string")
+        {
+            string temp = GetBeginning();
+            temp += buildmethods.GetBuildMsmMethod();
+            temp += mains.GetMsmMain(returntype);
+            temp += GetEnding();
+            return temp;
+        }
     }
 }

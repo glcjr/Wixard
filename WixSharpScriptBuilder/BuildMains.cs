@@ -111,5 +111,14 @@ namespace WixSharpScriptBuilder
             temp += addregularmain();
             return temp;
         }
+        public string GetMsmMain(string returntype="string")
+        {
+            string temp = GetInitMain(returntype);
+            temp += "string msiproject = buildmsm();";
+            temp += GetInsideMain();
+            temp += $"}}{Environment.NewLine}";
+            temp += addregularmain();
+            return temp;
+        }
     }
 }
