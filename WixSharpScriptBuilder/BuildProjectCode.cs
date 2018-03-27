@@ -130,6 +130,29 @@ namespace WixSharpScriptBuilder
             line += users.GetUsersLine();
             return line;
         }
+        private string GetMSMProjectStructure()
+        {
+            string line = "";
+            line += $", {Environment.NewLine}\tnew Dir(@\"{installdir}\",{Environment.NewLine}{Sourcefiles.GetMainExecutableLicenseReadMeLine(application.GetProductName(), progmenu)}";            
+            string directory = Sourcefiles.GetAppMainDirectory();
+            foreach (var file in Sourcefiles.GetSourceFiles(directory))
+                line += $", {Environment.NewLine} {file.GetFileLine()}";
+            line += Sourcefiles.GetSubdirectoryfiles();
+
+            line += ")";
+            foreach (var newdirectory in Sourcefiles.GetDirectories(true))
+            {
+                line += $", new Dir({Utilities.directorynamecheck(newdirectory)}";
+                foreach (var file in Sourcefiles.GetSourceFiles(newdirectory))
+                    line += $",{Environment.NewLine}\t {file.GetFileLine()}";
+                line += ")";
+            }
+            return line;
+        }
+        private string GetInitializeMSMProject()
+        {
+            return $"var project = new ManagedProject(\"{application.GetProductName()}\"{GetMSMProjectStructure()});{Environment.NewLine}";
+        }
         private string GetInitializeProject()
         {
             return $"var project = new ManagedProject(\"{application.GetProductName()}\"{GetProjectStructure()});{Environment.NewLine}";
@@ -159,6 +182,19 @@ namespace WixSharpScriptBuilder
         {
             string line = GetInitializeProject();
             line += GetMainProjectInfo();
+            return line;
+        }
+        private string GetMSMProjectInfo()
+        {
+            string temp = "";
+            temp += "\tproject.OutFileName = OutputFile; ";
+            temp += "project.UI = WUI.WixUI_ProgressOnly;";
+            return temp;
+        }
+        public string GetMSMProjectCode()
+        {
+            string line = GetInitializeMSMProject();
+            line += GetMSMProjectInfo();
             return line;
         }
 

@@ -68,7 +68,8 @@ namespace WixSharpScriptBuilder
             string temp = "";
             temp += SharedMethods.GetUsings(Options, WElements, Registryvalues);
             temp += $"namespace WixSharpSetUp {Environment.NewLine}{{ {Environment.NewLine}class Script {Environment.NewLine}{{ {Environment.NewLine} private static string OutputFile = \"\"; {Environment.NewLine}";
-            temp += SharedMethods.adduninstallmethod(installdir);
+            if (Options.GetIncludeUninstall())
+                temp += SharedMethods.adduninstallmethod(installdir);
             return temp;
         }
         private string GetEnding()
@@ -97,6 +98,7 @@ namespace WixSharpScriptBuilder
         }
         public string GetMsmScript(string returntype = "string")
         {
+            Options.SetIncludeUninstall(false);
             string temp = GetBeginning();
             temp += buildmethods.GetBuildMsmMethod();
             temp += mains.GetMsmMain(returntype);

@@ -74,7 +74,7 @@ namespace WixSharpScriptBuilder
         public string GetBuildMsmMethod()
         {
             string temp = $"{Environment.NewLine} static public string buildmsm() {Environment.NewLine} {{ {Environment.NewLine}\t";
-            temp += GetInsideBuildMethod();
+            temp += projectcode.GetMSMProjectCode();
             temp += $"return project.BuildMsm();{Environment.NewLine}}}{Environment.NewLine}";
             return temp;
         }
