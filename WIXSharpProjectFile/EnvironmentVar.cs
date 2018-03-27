@@ -164,13 +164,13 @@ namespace WIXSharpHelper
                 }
                 if (System)
                 {
-                    line += $"System = {System}";
+                    line += $"System = {System.ToString().ToLower()}";
                     if ((Permanent) || (Action != string.Empty))
                         line += ",";
                 }
                 if (Permanent)
                 {
-                    line += $"Placement = {Permanent}";
+                    line += $"Permanent = {Permanent.ToString().ToLower()}";
                     if ((Action != string.Empty))
                         line += ",";                
                 }

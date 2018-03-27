@@ -147,6 +147,9 @@ namespace WixSharpScriptBuilder
                     line += $",{Environment.NewLine}\t {file.GetFileLine()}";
                 line += ")";
             }
+            line += EnvironmentVariables.GetLine();
+            line += Registryvalues.GetLine();
+            line += users.GetUsersLine();
             return line;
         }
         private string GetInitializeMSMProject()

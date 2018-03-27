@@ -75,7 +75,7 @@ namespace WixSharpScriptBuilder
         private string GetMSMBeginning()
         {
             string temp = "";
-            temp += SharedMethods.GetStandardUsings();
+            temp += SharedMethods.GetStandardUsings(WElements, Registryvalues);
             temp += $"namespace WixSharpSetUp {Environment.NewLine}{{ {Environment.NewLine}class Script {Environment.NewLine}{{ {Environment.NewLine} private static string OutputFile = \"\"; {Environment.NewLine}";            
             return temp;
         }

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="wizardhat.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Wixard" version="1.0.6660.23690" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Wixard" version="1.0.6660.30506" language="neutral" processorArchitecture="msil" />
     <commandLine file="Wixard.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wixard.exe" size="2274240">
-      <assemblyIdentity name="Wixard" version="1.0.6660.23690" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wixard.exe" size="2274752">
+      <assemblyIdentity name="Wixard" version="1.0.6660.30506" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4v2dDx5i+h3wFOpL8ZJ07tvja+Ek6o+jNy1SPzf/v/g=</dsig:DigestValue>
+        <dsig:DigestValue>Xn3O2mO7zAZSRR6bLMYFhKbs66wCz2SA+/Pxe2+rTps=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

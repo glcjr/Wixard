@@ -42,9 +42,12 @@ namespace WixSharpScriptBuilder
 {
     public static class SharedMethods
     {
-        public static string GetStandardUsings()
+        public static string GetStandardUsings(Elements WElements, RegistryValues Registryvalues)
         {
-            return $"using System;{Environment.NewLine}using WixSharp;{Environment.NewLine}";
+            string line = $"using System;{Environment.NewLine}using WixSharp;{Environment.NewLine}";
+            if (Registryvalues.Count > 0)
+                line += $"{Environment.NewLine}using Microsoft.Win32;";
+            return line;
         }
         public static string GetUsings(SetupOptions Options, Elements WElements, RegistryValues Registryvalues)
         {
