@@ -42,9 +42,14 @@ namespace WixSharpScriptBuilder
 {
     public static class SharedMethods
     {
+        public static string GetStandardUsings()
+        {
+            return $"using System;{Environment.NewLine}using WixSharp;{Environment.NewLine}";
+        }
         public static string GetUsings(SetupOptions Options, Elements WElements, RegistryValues Registryvalues)
         {
-            string line = $"using System;{Environment.NewLine}using WixSharp;{Environment.NewLine}using WixSharp.CommonTasks;{Environment.NewLine}using WixSharp.Bootstrapper; {Environment.NewLine}";
+            string line = $"using System;{Environment.NewLine}using WixSharp;{Environment.NewLine}";
+            line += $"using WixSharp.CommonTasks;{Environment.NewLine}using WixSharp.Bootstrapper; {Environment.NewLine}";
             if (Options.GetCustomActions())
                 line += $"using Microsoft.Deployment.WindowsInstaller; {Environment.NewLine}using System.Windows.Forms;";
             if (WElements.Count > 0)

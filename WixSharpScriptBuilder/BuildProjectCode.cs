@@ -151,7 +151,7 @@ namespace WixSharpScriptBuilder
         }
         private string GetInitializeMSMProject()
         {
-            return $"var project = new ManagedProject(\"{application.GetProductName()}\"{GetMSMProjectStructure()});{Environment.NewLine}";
+            return $"var project = new Project(\"{application.GetProductName()}\"{GetMSMProjectStructure()});{Environment.NewLine}";
         }
         private string GetInitializeProject()
         {
