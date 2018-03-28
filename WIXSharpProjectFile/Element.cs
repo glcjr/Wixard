@@ -99,7 +99,7 @@ namespace WIXSharpHelper
         {
             XMLRoot = (string)info.GetValue("xmlroot", typeof(string));
             ElementName = (string)info.GetValue("ename", typeof(string));
-            Attributes = (WAttributes)info.GetValue("waattributes", typeof(WAttributes));
+            Attributes = (WAttributes)info.GetValue("waatributes", typeof(WAttributes));
         }
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {

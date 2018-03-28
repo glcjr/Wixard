@@ -4,7 +4,7 @@
   <description asmv2:iconFile="wizardhat.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Wixard" version="1.0.6660.30506" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Wixard" version="1.0.6660.33560" language="neutral" processorArchitecture="msil" />
     <commandLine file="Wixard.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wixard.exe" size="2274752">
-      <assemblyIdentity name="Wixard" version="1.0.6660.30506" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wixard.exe" size="2275264">
+      <assemblyIdentity name="Wixard" version="1.0.6660.33560" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Xn3O2mO7zAZSRR6bLMYFhKbs66wCz2SA+/Pxe2+rTps=</dsig:DigestValue>
+        <dsig:DigestValue>i09xEH+uyf/8a6e4sYu3vwZotcoBjFWaToCqvGcMRzk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -46,7 +46,7 @@ namespace WixSharpScriptBuilder
         {
             string line = $"using System;{Environment.NewLine}using WixSharp;{Environment.NewLine}";
             if (Registryvalues.Count > 0)
-                line += $"{Environment.NewLine}using Microsoft.Win32;";
+                line += $"using Microsoft.Win32;{Environment.NewLine}";
             return line;
         }
         public static string GetUsings(SetupOptions Options, Elements WElements, RegistryValues Registryvalues)

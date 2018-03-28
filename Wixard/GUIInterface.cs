@@ -1888,6 +1888,8 @@ namespace Wixard
                     compile.AddAssemblyLocation(windowsform);
                     compile.AddEmbedLocation(windowsform);
                 }
+                if (source.Contains("System.Xml.Linq"))
+                    compile.AdddotNetNameSpace("System.Xml.Linq", "v4.6.1");
                 compiledfilename = $"{Workingdir}\\w{rand.Next(0, 5000)}{ApplicationName.Replace(" ", "_")}.exe";
                 compile.SetResultFileName(compiledfilename);
                 compile.SetToOutputEXE();
@@ -1909,6 +1911,11 @@ namespace Wixard
                         compile = null;
 
                         Cleanup(compiledfilename);
+                    }
+                    else
+                    {
+                        foreach (CompilerError e in compile.GetErrors())
+                            Compileresult += e.ErrorText;
                     }
                 }
             }
