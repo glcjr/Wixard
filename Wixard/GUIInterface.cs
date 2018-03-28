@@ -1881,7 +1881,7 @@ namespace Wixard
 
                 Compiler compile = new Compiler(CompilerLanguages.csharp, source);
                 compile.AddUsefulWindowsDesktopAssemblies();
-                compile.AddAssemblyLocations(wixsharplist.ToArray());
+                
                 if (source.Contains("using System.Windows.Forms"))
                 {
                     string windowsform = GetSystemWindowsForms();
@@ -1890,6 +1890,7 @@ namespace Wixard
                 }
                 if (source.Contains("System.Xml.Linq"))
                     compile.AdddotNetNameSpace("System.Xml.Linq", "v4.6.1");
+                compile.AddAssemblyLocations(wixsharplist.ToArray());
                 compiledfilename = $"{Workingdir}\\w{rand.Next(0, 5000)}{ApplicationName.Replace(" ", "_")}.exe";
                 compile.SetResultFileName(compiledfilename);
                 compile.SetToOutputEXE();
