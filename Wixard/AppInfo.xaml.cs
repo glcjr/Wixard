@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,20 @@ namespace Wixard
         private void btnRemoveicon_Click(object sender, RoutedEventArgs e)
         {
             win.Icon = "";
+        }
+
+        private void btnGetVersion_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(win.GetFileVersion()))
+            {
+                OpenFileDialog of = new OpenFileDialog();
+                of.Filter = "Exe Files (*.exe, *.dll) |*.exe;*.dll|All Files (*.*)|*.*";
+                if (of.ShowDialog() == true)
+                {
+                    var versionInfo = FileVersionInfo.GetVersionInfo(of.FileName);
+                    win.AppVersion = versionInfo.ProductVersion;
+                }
+            }
         }
     }
 }

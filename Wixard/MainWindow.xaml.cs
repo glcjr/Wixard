@@ -67,7 +67,7 @@ namespace Wixard
             this.DataContext = win;            
             win.Addnetids();
             win.CheckEnvironment();
-            
+            AppInfoControl.win = win;
             UserControlCheck(AppInfoControl);
             win.changed = false;
             string filename = checkcommandline();

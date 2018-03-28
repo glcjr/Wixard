@@ -34,18 +34,23 @@ namespace Wixard
 
         private void btnupdateaddelem_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if ((win.ElementName == string.Empty) || (win.ElementXMLRoot == string.Empty))
+                MessageBox.Show("Name and XMLRoot are required fields");
+            else
             {
-                if (btnupdateaddelem.Content.Equals("Update"))
-                    win.UpdateElem(ElemsList.SelectedIndex);
-                else
-                    win.AddElem();
-                win.NewElem();
-                btnupdateaddelem.Content = "Add";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    if (btnupdateaddelem.Content.Equals("Update"))
+                        win.UpdateElem(ElemsList.SelectedIndex);
+                    else
+                        win.AddElem();
+                    win.NewElem();
+                    btnupdateaddelem.Content = "Add";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

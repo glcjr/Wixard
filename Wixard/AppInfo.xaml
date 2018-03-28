@@ -46,8 +46,15 @@
                 <TextBox x:Name="txtAppName" MinWidth="160" Text="{Binding ApplicationName}"/>
             </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="3"  HorizontalAlignment="Left" Stretch="Uniform">
-                <TextBox x:Name="txtAppVersion" MinWidth="160" Text="{Binding AppVersion}"/>
-            </Viewbox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" x:Name="txtAppVersion" MinWidth="140" Text="{Binding AppVersion}"/>
+                <Button Grid.Column="1" x:Name="btnGetVersion" Content="From File" Click="btnGetVersion_Click" />
+            </Grid>
+        </Viewbox>
             <Viewbox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Stretch="Uniform">
                 <TextBox x:Name="txtPubName" MinWidth="160" Text="{Binding PublisherName}"/>
             </Viewbox>

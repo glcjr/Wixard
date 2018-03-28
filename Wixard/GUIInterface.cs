@@ -21,6 +21,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO.Compression;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 /*********************************************************************************************************************************
 Copyright and Licensing Message
@@ -217,6 +218,21 @@ namespace Wixard
             NotifyPropertyChanged("HelpLink");
             NotifyPropertyChanged("Icon");
             NotifyPropertyChanged("IconLocation");
+        }
+        public bool GetFileVersion()
+        {
+            bool found = false;
+            foreach (var file in project.GetSourceFiles().GetSourceFiles())
+            {
+                if (file.GetIsMainExecutable())
+                {
+                    found = true;
+                    var versionInfo = FileVersionInfo.GetVersionInfo(file.GetPath());
+                    AppVersion = versionInfo.ProductVersion;
+                    break;
+                }
+            }
+            return found;
         }
         #endregion
         #region SetupOptions
@@ -1893,8 +1909,7 @@ namespace Wixard
                 compile.AddAssemblyLocations(wixsharplist.ToArray());
                 compiledfilename = $"{Workingdir}\\w{rand.Next(0, 5000)}{ApplicationName.Replace(" ", "_")}.exe";
                 compile.SetResultFileName(compiledfilename);
-                compile.SetToOutputEXE();
-
+                compile.SetToOutputEXE();                            
 
                 compile.SetToLaunchAfterCompile("Process", new object[] { "nothing", "More Nothing" });
                 Thread.Sleep(1000);

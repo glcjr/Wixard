@@ -82,10 +82,21 @@ namespace WixSharpScriptBuilder
         private string GetEnding()
         {
             string temp = "";
-            temp += WElements.GetElementMethod();
+            temp += GetElementMethod();
             temp += $"}}{Environment.NewLine} }}";
             temp += SharedMethods.GetCustomActions(Options);
             return temp;
+        }
+        public string GetElementMethod()
+        {
+            string line = "";
+            if (WElements.Count > 0)
+            {
+                line += $"static void InjectElements(XDocument document){Environment.NewLine} {{ {Environment.NewLine}var ";
+                line += WElements.GetLine();
+                line += $"{Environment.NewLine}}}{Environment.NewLine}";
+            }
+            return line;
         }
         public string GetMSIScript(string returntype="string")
         {

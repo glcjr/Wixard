@@ -76,17 +76,9 @@ namespace WIXSharpHelper
         {
             WixElements.Remove(ele);
         }
-        public string GetElementMethod()
+        public List<Element> GetWixElements()
         {
-            string line = "";
-            if (WixElements.Count > 0)
-            {
-                line += $"static void InjectElements(XDocument document){Environment.NewLine} {{ {Environment.NewLine}var ";
-                foreach (var ele in WixElements)
-                    line += ele.GetLine();
-                line += $"{Environment.NewLine}}}{Environment.NewLine}";
-            }
-            return line;
+            return WixElements;
         }
         public int Count
         {
@@ -113,6 +105,13 @@ namespace WIXSharpHelper
         public void Update(int index, Element elem)
         {
             WixElements[index] = elem;
+        }
+        public string GetLine()
+        {
+            string line = "";
+            foreach (var ele in WixElements)
+                line += ele.GetLine();
+            return line;
         }
     }
 }
