@@ -123,6 +123,7 @@
             </Viewbox>
             <Grid x:Name="CustomIDs" Grid.Column="1" Grid.Row="8" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
                     <ColumnDefinition Width="60*"/>
                     <ColumnDefinition Width="40*"/>
                 </Grid.ColumnDefinitions>
@@ -133,8 +134,8 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <ListBox x:Name="CustomElemsList" Grid.Column="0" Grid.RowSpan="4" FontSize="12" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding CustomElems}" Height="54" VerticalAlignment="Top" SelectionChanged="CustomElemsList_SelectionChanged" />
-                <Grid x:Name="CustomElemListButtons" Grid.Column="1" Grid.RowSpan="4">
+                <ListBox x:Name="CustomElemsList" Grid.Column="1" Grid.RowSpan="4" FontSize="12" ScrollViewer.VerticalScrollBarVisibility="Visible" MaxHeight="{Binding ElementName=CertList, Path=ActualHeight}" ItemsSource="{Binding CustomElems}" Height="54" VerticalAlignment="Top" SelectionChanged="CustomElemsList_SelectionChanged" />
+                <Grid x:Name="CustomElemListButtons" Grid.Column="2" Grid.RowSpan="4">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
